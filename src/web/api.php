@@ -14,8 +14,8 @@ function makeCurlRequest( $endpoint, $payload, $params = null, $isXML = true, $i
 	$ch = curl_init($endpoint);
 	$ch = curl_init();
 	
-	//$login = base64_encode("dan@dogsbody.org:trustno1");
-	$login = base64_encode("apitests@justgiving.com:password");
+	$login = base64_encode("dan@dogsbody.org:trustno1");
+	// $login = base64_encode("apitests@justgiving.com:password");
 //	$details = "test@justgiving.com:testpassword";
 //	$login = base64_encode($details);	
 	
@@ -46,6 +46,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 	curl_setopt( $ch, CURLOPT_SSL_VERIFYHOST, 0 );	
 	curl_setopt( $ch, CURLOPT_HTTPHEADER , $header);
 	curl_setopt( $ch, CURLOPT_HTTPGET , 1);
+	
 	//curl_setopt( $ch, CURLOPT_POST   , 0); //was 1
 	//curl_setopt( $ch, CURLOPT_POSTFIELDS , $payload );
 	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
@@ -76,9 +77,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 
 	$data = $result;
 	return $data;
-
 }
-
 
 $endpoint = "https://api.staging.justgiving.com/decbf1d2/v1/fundraising/pages";
 

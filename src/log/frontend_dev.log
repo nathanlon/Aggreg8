@@ -239,3 +239,101 @@ Sep 18 19:35:29 symfony [info] {sfPatternRouting} Match route "homepage" (/) for
 Sep 18 19:35:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
 Sep 18 19:35:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
 Sep 18 19:35:29 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 21:01:01 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 21:01:01 symfony [info] {myUser} Automatic user logout due to timeout
+Sep 18 21:01:01 symfony [info] {myUser} User is not authenticated
+Sep 18 21:01:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 21:01:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 21:01:01 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 21:09:55 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 21:09:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 21:09:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 21:09:55 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 21:09:55 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 18 21:09:55 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.just_giving_page_code AS p__just_giving_page_code, p.charity_code AS p__charity_code, p.charity_name AS p__charity_name, p.money_raised AS p__money_raised, p.just_giving_event_id AS p__just_giving_event_id FROM page p - ()
+Sep 18 21:10:19 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/templates/indexSuccess.php"
+Sep 18 21:10:19 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/templates/layout.php"
+Sep 18 21:10:19 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/templates/layout.php"
+Sep 18 21:10:19 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php:25))
+Sep 18 21:10:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 18 21:10:19 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php:25))
+Sep 18 21:10:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 18 21:10:19 symfony [info] {sfWebDebugLogger} Configuration 73.92 ms (10)
+Sep 18 21:10:19 symfony [info] {sfWebDebugLogger} Factories 44.88 ms (1)
+Sep 18 21:10:19 symfony [info] {sfWebDebugLogger} Action "default/index" 23890.01 ms (1)
+Sep 18 21:10:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Sep 18 21:10:19 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 120.05 ms (1)
+Sep 18 21:10:19 symfony [info] {sfWebResponse} Send content (33672 o)
+Sep 18 21:10:28 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 21:10:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 21:10:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 21:10:28 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 21:10:28 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 18 21:10:28 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.just_giving_page_code AS p__just_giving_page_code, p.charity_code AS p__charity_code, p.charity_name AS p__charity_name, p.money_raised AS p__money_raised, p.just_giving_event_id AS p__just_giving_event_id FROM page p - ()
+Sep 18 21:10:28 symfony [notice] {sfWebDebugLogger}  Notice at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 27 (Undefined variable: pages)
+Sep 18 21:12:42 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 21:12:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 21:12:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 21:12:42 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 21:12:42 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 18 21:12:42 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.just_giving_page_code AS p__just_giving_page_code, p.charity_code AS p__charity_code, p.charity_name AS p__charity_name, p.money_raised AS p__money_raised, p.just_giving_event_id AS p__just_giving_event_id FROM page p - ()
+Sep 18 21:12:42 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/templates/indexSuccess.php"
+Sep 18 21:12:42 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/templates/layout.php"
+Sep 18 21:12:42 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/templates/layout.php"
+Sep 18 21:12:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 18 21:12:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 18 21:12:42 symfony [info] {sfWebDebugLogger} Configuration 3.08 ms (9)
+Sep 18 21:12:42 symfony [info] {sfWebDebugLogger} Factories 43.97 ms (1)
+Sep 18 21:12:42 symfony [info] {sfWebDebugLogger} Action "default/index" 38.08 ms (1)
+Sep 18 21:12:42 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Sep 18 21:12:42 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 16.25 ms (1)
+Sep 18 21:12:42 symfony [info] {sfWebResponse} Send content (33882 o)
+Sep 18 21:12:53 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 21:12:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 21:12:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 21:12:53 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 21:12:53 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 18 21:12:53 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.just_giving_page_code AS p__just_giving_page_code, p.charity_code AS p__charity_code, p.charity_name AS p__charity_name, p.money_raised AS p__money_raised, p.just_giving_event_id AS p__just_giving_event_id FROM page p - ()
+Sep 18 21:12:53 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/templates/indexSuccess.php"
+Sep 18 21:12:53 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/templates/layout.php"
+Sep 18 21:12:53 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/templates/layout.php"
+Sep 18 21:12:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 18 21:12:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 18 21:12:53 symfony [info] {sfWebDebugLogger} Configuration 1.30 ms (9)
+Sep 18 21:12:53 symfony [info] {sfWebDebugLogger} Factories 49.90 ms (1)
+Sep 18 21:12:53 symfony [info] {sfWebDebugLogger} Action "default/index" 38.04 ms (1)
+Sep 18 21:12:53 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Sep 18 21:12:53 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 15.13 ms (1)
+Sep 18 21:12:53 symfony [info] {sfWebResponse} Send content (33882 o)
+Sep 18 21:23:35 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 21:23:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 21:23:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 21:23:35 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 21:23:35 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 18 21:23:35 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.just_giving_page_code AS p__just_giving_page_code, p.charity_code AS p__charity_code, p.charity_name AS p__charity_name, p.money_raised AS p__money_raised, p.just_giving_event_id AS p__just_giving_event_id FROM page p - ()
+Sep 18 21:23:35 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/templates/indexSuccess.php"
+Sep 18 21:23:35 symfony [err] {Doctrine_Record_UnknownPropertyException} Unknown method Page::justGivingPageCode
+Sep 18 21:23:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Sep 18 21:23:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 18 21:23:35 symfony [info] {sfWebDebugLogger} Configuration 1.25 ms (9)
+Sep 18 21:23:35 symfony [info] {sfWebDebugLogger} Factories 44.71 ms (1)
+Sep 18 21:23:35 symfony [info] {sfWebDebugLogger} Action "default/index" 37.76 ms (1)
+Sep 18 21:23:35 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Sep 18 21:23:35 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 88.66 ms (1)
+Sep 18 21:23:55 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 21:23:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 21:23:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 21:23:55 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 21:23:55 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 18 21:23:55 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.just_giving_page_code AS p__just_giving_page_code, p.charity_code AS p__charity_code, p.charity_name AS p__charity_name, p.money_raised AS p__money_raised, p.just_giving_event_id AS p__just_giving_event_id FROM page p - ()
+Sep 18 21:23:55 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/templates/indexSuccess.php"
+Sep 18 21:23:55 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/templates/layout.php"
+Sep 18 21:23:55 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/templates/layout.php"
+Sep 18 21:23:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 18 21:23:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 18 21:23:55 symfony [info] {sfWebDebugLogger} Configuration 1.23 ms (9)
+Sep 18 21:23:55 symfony [info] {sfWebDebugLogger} Factories 43.66 ms (1)
+Sep 18 21:23:55 symfony [info] {sfWebDebugLogger} Action "default/index" 37.86 ms (1)
+Sep 18 21:23:55 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Sep 18 21:23:55 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 23.29 ms (1)
+Sep 18 21:23:55 symfony [info] {sfWebResponse} Send content (33893 o)
