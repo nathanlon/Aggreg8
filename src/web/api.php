@@ -1,7 +1,7 @@
 <?php 
 // $callName, $endpoint, $params = null, $isXML = true, $isTestMode = false
 // function makeCurlRequest($callName, $endpoint, $params = null, $isXML = true, $isTestMode = false) {		
-function makeCurlRequest( $endpoint, $payload, $params = null, $isXML = true, $isTestMode = false) 
+function makeCurlRequest( $endpoint, $payload, $params = null, $header = array(), $isXML = true, $isTestMode = false) 
 {	
 	//add any parameters directly to the end point.
 	if (!is_null($params))
@@ -9,38 +9,17 @@ function makeCurlRequest( $endpoint, $payload, $params = null, $isXML = true, $i
 		$endpoint .= $params;
 	}
 
-	echo "\nfull endpoint is ".$endpoint;
 	//use cURL to send a request in xml, and receive the correct response.
 	$ch = curl_init($endpoint);
 	$ch = curl_init();
 	
-	//$login = base64_encode("dan@dogsbody.org:trustno1");
-	$login = base64_encode("apitests@justgiving.com:password");
-//	$details = "test@justgiving.com:testpassword";
-//	$login = base64_encode($details);	
+    /*
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+     'Authorization: ' . CJ_API_KEY)
+     'X-Authorization: ' . );
+    */	
 	
-//	$header = array();
-
-//	$header  = array("Content-type: text/xml", "Authorize: Basic " . $login);
-//	$header  = array("Content-type" => "application/xml", "Authorize" => "Basic " . $login);	
-	$header  = array("Content-Type: application/xml", "Authorize: Basic " . $login);
-	
-	echo'<pre>';
-	print_r($header);
-	echo'</pre>';
-//	die;
-	
-	// Authorize header
-	
-	
-/*
-curl_setopt($ch, CURLOPT_HTTPHEADER, array(
- 'Authorization: ' . CJ_API_KEY)
- 'X-Authorization: ' . );
-*/	
-	$headers = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-	
-//    curl_setopt( $ch, CURLOPT_USERPWD, $username.':'.$password);	
+    //curl_setopt( $ch, CURLOPT_USERPWD, $username.':'.$password);	
 	curl_setopt( $ch, CURLOPT_URL , $endpoint );
 	curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, 0 );
 	curl_setopt( $ch, CURLOPT_SSL_VERIFYHOST, 0 );	
@@ -62,7 +41,6 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 	}
 
 	//auto process as a simplexml file if it is xml, otherwise return raw data
-	/*
 	if ($isXML)
 	{
 		//get the xml with no cdata parts to it.
@@ -72,17 +50,12 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 	{
 		$data = $result;
 	}
-*/
 
-	$data = $result;
 	return $data;
-
 }
 
 
 $endpoint = "https://api.staging.justgiving.com/decbf1d2/v1/fundraising/pages";
-
-
 
 $params = ""; //,comments,attendees
 /*
@@ -106,8 +79,14 @@ $payload = <<<EOF
 EOF;
 */
 $payload= "";
+
+//$login = base64_encode("dan@dogsbody.org:trustno1");
+$login = base64_encode("apitests@justgiving.com:password");
+
+$header  = array("Content-Type: application/xml", "Authorize: Basic " . $login);
+
 // function makeCurlRequest( $endpoint, $payload, $params = null, $isXML = true, $isTestMode = false) {		
-$xml = makeCurlRequest($endpoint, $payload, $params,  true);
+$xml = makeCurlRequest($endpoint, $payload, $params, $header, true);
 echo'<pre>';
 print_r($xml);
 echo'</pre>';
