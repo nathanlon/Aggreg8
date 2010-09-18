@@ -2,4 +2,42 @@
 # http://www.symfony-project.org/reference/1_4/en/11-App
 
 # default values
-#all:
+all:
+  just_giving_app_key: 5601072ab94901581afe5f75c8ac399d
+  just_giving_app_id: 50694b0a
+# --------------------  
+# Just Giving API URLs
+# --------------------
+# Account
+#  Create (http://apimanagement.justgiving.com/wiki/account-create)
+  account_create_sand: https://api.staging.justgiving.com/{applicationid}/v1/account 
+  account_create_live: https://api.justgiving.com/{applicationid}/v1/account 
+#  List All Pages (http://apimanagement.justgiving.com/wiki/account-list-all-pages)
+  account_list_all_pages_sand: https://api.staging.justgiving.com/{applicationid}/v1/account/{email}/pages 
+  account_list_all_pages_live: https://api.justgiving.com/{applicationid}/v1/account/{email}/pages 
+# Donation
+#  Retrieve Status (http://apimanagement.justgiving.com/wiki/donation-retrieve-status)
+  donation_retrieve_status_sand: https://api.staging.justgiving.com/{applicationid}/v1/donation/{donationId}/status 
+  donation_retrieve_status_live: https://api.justgiving.com/{applicationid}/v1/donation/{donationId}/status  
+# Fundraising
+#  Create (http://apimanagement.justgiving.com/wiki/page-create)
+  fundraising_create_sand: https://api.staging.justgiving.com/{applicationid}/v1/donation/{donationId}/status 
+  fundraising_create_live: https://api.justgiving.com/{applicationid}/v1/donation/{donationId}/status 
+#  Is ShortName Registered (http://apimanagement.justgiving.com/wiki/page-is-shortName-registered)
+  fundraising_is_shortname_registered_sand: https://api.staging.justgiving.com/{applicationid}/v1/fundraising/pages/{pageShortName} 
+  fundraising_is_shortname_registered_live: https://api.justgiving.com/{applicationid}/v1/fundraising/pages/{pageShortName} 
+#  List All (http://apimanagement.justgiving.com/wiki/page-list-all)
+  fundraising_list_all_sand: https://api.staging.justgiving.com/{applicationid}/v1/fundraising/pages  
+  fundraising_list_all_live: https://api.justgiving.com/{applicationid}/v1/fundraising/pages 
+#  Retrieve Donations For Page
+  fundraising_retrieve_donations_for_page_sand: https://api.staging.justgiving.com/{applicationid}/v1/fundraising/pages/{pageShortName}/donations 
+  fundraising_retrieve_donations_for_page_live: https://api.justgiving.com/{applicationid}/v1/fundraising/pages/{pageShortName}/donations 
+#  Retrieve Page
+  fundraising_retrieve_page_sand: https://api.staging.justgiving.com/{applicationid}/v1/fundraising/pages/{pageShortName} 
+  fundraising_retrieve_page_live: https://api.justgiving.com/{applicationid}/v1/fundraising/pages/{pageShortName} 
+#  Upload Image
+#  Update Story
+# Search
+#  Charity Search (http://apimanagement.justgiving.com/wiki/search-charity-search)
+  search_charity_search_sand: https://api.staging.justgiving.com/{applicationid}/v1/charity/search 
+  search_charity_search_live: https://api.justgiving.com/{applicationid}/v1/charity/search 

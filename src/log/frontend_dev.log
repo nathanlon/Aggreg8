@@ -52,3 +52,104 @@ Sep 18 15:17:49 symfony [info] {sfWebDebugLogger} Factories 12.29 ms (1)
 Sep 18 15:17:49 symfony [info] {sfWebDebugLogger} Action "default/index" 0.26 ms (1)
 Sep 18 15:17:49 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 7.09 ms (1)
 Sep 18 15:17:49 symfony [info] {sfWebResponse} Send content (27387 o)
+Sep 18 16:24:45 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 16:24:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 16:24:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 16:24:45 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 16:24:45 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/templates/indexSuccess.php"
+Sep 18 16:24:45 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/templates/layout.php"
+Sep 18 16:24:45 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/templates/layout.php"
+Sep 18 16:24:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 18 16:24:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 18 16:24:45 symfony [info] {sfWebDebugLogger} Configuration 13.24 ms (10)
+Sep 18 16:24:45 symfony [info] {sfWebDebugLogger} Factories 43.46 ms (1)
+Sep 18 16:24:45 symfony [info] {sfWebDebugLogger} Action "default/index" 0.12 ms (1)
+Sep 18 16:24:45 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 12.06 ms (1)
+Sep 18 16:24:45 symfony [info] {sfWebResponse} Send content (28179 o)
+Sep 18 17:16:56 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 17:16:56 symfony [info] {myUser} Automatic user logout due to timeout
+Sep 18 17:16:56 symfony [info] {myUser} User is not authenticated
+Sep 18 17:16:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 17:16:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 17:16:56 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 17:16:56 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/templates/indexSuccess.php"
+Sep 18 17:16:56 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/templates/layout.php"
+Sep 18 17:16:56 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/templates/layout.php"
+Sep 18 17:16:56 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php:20))
+Sep 18 17:16:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 18 17:16:56 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php:20))
+Sep 18 17:16:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 18 17:16:56 symfony [info] {sfWebDebugLogger} Configuration 83.60 ms (10)
+Sep 18 17:16:56 symfony [info] {sfWebDebugLogger} Factories 104.70 ms (1)
+Sep 18 17:16:56 symfony [info] {sfWebDebugLogger} Action "default/index" 0.16 ms (1)
+Sep 18 17:16:56 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 16.86 ms (1)
+Sep 18 17:16:56 symfony [info] {sfWebResponse} Send content (29011 o)
+Sep 18 17:17:07 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 17:17:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 17:17:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 17:17:07 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 17:17:07 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/templates/indexSuccess.php"
+Sep 18 17:17:07 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/templates/layout.php"
+Sep 18 17:17:07 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/aggreg8/src/apps/frontend/templates/layout.php"
+Sep 18 17:17:07 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php:20))
+Sep 18 17:17:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 18 17:17:07 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php:20))
+Sep 18 17:17:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 18 17:17:07 symfony [info] {sfWebDebugLogger} Configuration 1.32 ms (9)
+Sep 18 17:17:07 symfony [info] {sfWebDebugLogger} Factories 49.57 ms (1)
+Sep 18 17:17:07 symfony [info] {sfWebDebugLogger} Action "default/index" 0.17 ms (1)
+Sep 18 17:17:07 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 12.75 ms (1)
+Sep 18 17:17:07 symfony [info] {sfWebResponse} Send content (28299 o)
+Sep 18 17:17:18 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 17:17:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 17:17:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 17:17:18 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 17:17:18 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php:20))
+Sep 18 17:17:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 18 17:17:18 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php:20))
+Sep 18 17:17:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 18 17:17:18 symfony [info] {sfWebDebugLogger} Configuration 1.13 ms (8)
+Sep 18 17:17:18 symfony [info] {sfWebDebugLogger} Factories 41.19 ms (1)
+Sep 18 17:17:18 symfony [info] {sfWebDebugLogger} Action "default/index" 0.17 ms (1)
+Sep 18 17:17:18 symfony [info] {sfWebDebugLogger} View "None" for "default/index" 0.01 ms (1)
+Sep 18 17:17:18 symfony [info] {sfWebResponse} Send content (16683 o)
+Sep 18 17:17:23 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 17:17:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 17:17:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 17:17:23 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 17:17:26 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 17:17:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 17:17:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 17:17:26 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 17:19:24 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 17:19:24 symfony [err] {sfWebDebugLogger}  Strict notice at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 11 (Declaration of defaultActions::preExecute() should be compatible with that of sfAction::preExecute())
+Sep 18 17:19:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 17:19:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 17:19:24 symfony [err] {sfWebDebugLogger}  Error at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 14 (Argument 1 passed to defaultActions::preExecute() must be an instance of sfWebRequest, none given, called in /Applications/MAMP/htdocs/aggreg8/src/lib/vendor/symfony/lib/filter/sfExecutionFilter.class.php on line 91 and defined)
+Sep 18 17:19:32 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 17:19:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 17:19:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 17:19:32 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 17:19:32 symfony [notice] {sfWebDebugLogger}  Notice at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 27 (Undefined variable: app_key)
+Sep 18 17:19:37 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 17:19:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 17:19:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 17:19:37 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 17:19:37 symfony [notice] {sfWebDebugLogger}  Notice at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 27 (Undefined variable: app_key)
+Sep 18 17:34:31 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 17:34:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 17:34:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 17:34:31 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 17:36:06 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 17:36:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 17:36:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 17:36:07 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 17:36:12 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 17:36:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 17:36:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 17:36:12 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 17:36:38 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 17:36:43 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 17:36:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 17:36:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 17:36:43 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"

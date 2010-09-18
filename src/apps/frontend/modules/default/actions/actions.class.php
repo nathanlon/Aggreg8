@@ -17,6 +17,12 @@ class defaultActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    //$this->forward('default', 'module');
+	$app_key = sfConfig::get('app_just_giving_app_key');
+	$app_id = sfConfig::get('app_just_giving_app_id');	
+	echo str_replace("{applicationid}", $app_id, sfConfig::get('app_fundraising_list_all_live'));	
+
+//	$url = str_repace("{applicationid}",$app_id, sfConfig::get('fundraising_list_all_sand'));
+//	$url_to_send = str_repace("{pageShortName}",$app_id, $url);
+	die();
   }
 }
