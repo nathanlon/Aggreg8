@@ -3,8 +3,8 @@
 // function makeCurlRequest($callName, $endpoint, $params = null, $isXML = true, $isTestMode = false) {		
 function makeCurlRequest( $endpoint, $payload, $params = null, $isXML = true, $isTestMode = false) 
 {	
-	$username = base64_encode("dan@dogsbody.org");  // dan@dogsbody.org
-	$password = base64_encode("trustno1");
+//	$username = base64_encode("dan@dogsbody.org");  // dan@dogsbody.org
+//	$password = base64_encode("trustno1");
 
 	//add any parameters directly to the end point.
 	if (!is_null($params))
@@ -21,16 +21,15 @@ function makeCurlRequest( $endpoint, $payload, $params = null, $isXML = true, $i
 //	$header[] = "Host: www.supplierswebsite.com";
 	$header[] = "Content-type: text/xml";
 	$header[] = "Content-length: ".strlen($payload) . "\r\n";
-//	$header[] = $request;	
+	$header[] = "Authorization: Basic " . $username.":".$password;	
 	// Authorize header
-	
-	
 	
 /*
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-  'Authorization: ' . CJ_API_KEY)
+ 'Authorization: ' . CJ_API_KEY)
   'X-Authorization: ' . );
 */	
+	$headers = curl_getinfo($ch, CURLINFO_HEADER_OUT);
 	
 //    curl_setopt( $ch, CURLOPT_USERPWD, $username.':'.$password);	
 	curl_setopt( $ch, CURLOPT_URL , $endpoint );
@@ -71,9 +70,10 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 }
 
 
-$endpoint = "https://api.staging.justgiving.com/50694b0a/v1/fundraising/pages";
+$endpoint = "https://api.staging.justgiving.com/dan@dogsbody.org/v1/fundraising/pages";
 
 $params = ""; //,comments,attendees
+/*
 //Yes About Authentication »/
 $payload = <<<EOF
 <pageRegistration xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
@@ -92,7 +92,8 @@ $payload = <<<EOF
 <targetAmount>2000</targetAmount>
 </pageRegistration>
 EOF;
-
+*/
+$payload= "";
 // function makeCurlRequest( $endpoint, $payload, $params = null, $isXML = true, $isTestMode = false) {		
 $xml = makeCurlRequest($endpoint, $payload, $params,  true);
 echo'<pre>';
