@@ -1,0 +1,37 @@
+Event:
+  columns:
+    id:                       { type: integer(8), primary: true, autoincrement: true }
+    total_money:              decimal(20,2)
+
+JustGivingEvent:
+  columns:
+    id:                       { type: integer(8), primary: true, autoincrement: true }
+    jg_event_code:            varchar(20)
+    event_id:                 integer
+  relations:
+    Event:
+      alias:                  Event
+      local:                  event_id
+      foreign:                id
+      type:                   one
+
+Page:
+  columns:
+    id:                       { type: integer(8), primary: true, autoincrement: true }
+    just_giving_page_code:    varchar(20)
+    charity_code:             varchar(20)
+    charity_name:             varchar(200)
+    money_raised:             decimal(20,2)
+    just_giving_event_id:     integer
+  relations:
+    JustGivingEvent:
+      alias:                  JustGivingEvent
+      local:                  just_giving_event_id
+      foreign:                id
+      type:                   one
+
+charity:
+  columns:
+    id:                       { type: integer(8), primary: true, autoincrement: true }
+    code:                     varchar(20)
+    name:                     varchar(200)
