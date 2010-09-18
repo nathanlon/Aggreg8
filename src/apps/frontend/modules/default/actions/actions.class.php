@@ -45,7 +45,7 @@ EOF;
                 		'content' => $page_create_data));
 
         $ctx = stream_context_create($params);
-        $response = file_put_contents($page_url, false, $ctx);
+        $response = file_put_contents($page_url, $page_create_data, FILE_APPEND, $ctx);
 
 echo'<pre>';
 print_r($response);
