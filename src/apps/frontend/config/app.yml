@@ -5,6 +5,9 @@
 all:
   just_giving_app_key: 5601072ab94901581afe5f75c8ac399d
   just_giving_app_id: 50694b0a
+  username: dogsbody
+  password: trustno1
+  
 # --------------------  
 # Just Giving API URLs
 # --------------------

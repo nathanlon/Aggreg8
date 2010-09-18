@@ -153,3 +153,61 @@ Sep 18 17:36:43 symfony [info] {sfPatternRouting} Match route "homepage" (/) for
 Sep 18 17:36:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
 Sep 18 17:36:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
 Sep 18 17:36:43 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 17:55:16 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 17:55:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 17:55:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 17:55:16 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 17:59:17 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 17:59:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 17:59:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 17:59:17 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 17:59:17 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 43 (file_put_contents() expects parameter 3 to be long, string given)
+Sep 18 17:59:24 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 17:59:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 17:59:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 17:59:24 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 17:59:24 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 43 (file_put_contents() expects parameter 4 to be resource, string given)
+Sep 18 18:00:31 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 18:00:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 18:00:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 18:00:31 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 18:00:31 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 43 (file_put_contents(https://api.justgiving.com/50694b0a/v1/fundraising/pages) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: HTTP wrapper does not support writeable connections)
+Sep 18 18:05:59 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 18:05:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 18:05:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 18:05:59 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 18:05:59 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 52 (file_put_contents(https://api.justgiving.com/50694b0a/v1/fundraising/pages) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: HTTP wrapper does not support writeable connections)
+Sep 18 18:06:29 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 18:06:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 18:06:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 18:06:29 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 18:06:35 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 18:06:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 18:06:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 18:06:35 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 18:06:35 symfony [notice] {sfWebDebugLogger}  Notice at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 48 (Undefined variable: url)
+Sep 18 18:06:35 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 48 (file_get_contents() [<a href='function.file-get-contents'>function.file-get-contents</a>]: Filename cannot be empty)
+Sep 18 18:06:42 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 18:06:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 18:06:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 18:06:43 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 18:06:43 symfony [notice] {sfWebDebugLogger}  Notice at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 48 (file_get_contents() [<a href='function.file-get-contents'>function.file-get-contents</a>]: Content-type not specified assuming application/x-www-form-urlencoded)
+Sep 18 18:06:44 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 48 (file_get_contents(https://api.justgiving.com/50694b0a/v1/fundraising/pages) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 403 Forbidden
+)
+Sep 18 18:08:02 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 18:08:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 18:08:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 18:08:02 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 18:08:03 symfony [notice] {sfWebDebugLogger}  Notice at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 48 (file_get_contents() [<a href='function.file-get-contents'>function.file-get-contents</a>]: Content-type not specified assuming application/x-www-form-urlencoded)
+Sep 18 18:08:03 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 48 (file_get_contents(https://api.justgiving.com/50694b0a/v1/fundraising/pages) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 403 Forbidden
+)
+Sep 18 18:08:15 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 18:08:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 18:08:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 18:08:15 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 18:08:15 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 48 (file_put_contents() expects parameter 3 to be long, resource given)
+Sep 18 18:09:43 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 18:09:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 18:09:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 18:09:43 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 18:09:43 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 48 (file_put_contents() expects parameter 3 to be long, resource given)

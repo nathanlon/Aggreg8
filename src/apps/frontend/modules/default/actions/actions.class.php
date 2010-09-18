@@ -19,10 +19,43 @@ class defaultActions extends sfActions
   {
 	$app_key = sfConfig::get('app_just_giving_app_key');
 	$app_id = sfConfig::get('app_just_giving_app_id');	
-	echo str_replace("{applicationid}", $app_id, sfConfig::get('app_fundraising_list_all_live'));	
+	$page_url = str_replace("{applicationid}", $app_id, sfConfig::get('app_fundraising_list_all_live'));	
 
-//	$url = str_repace("{applicationid}",$app_id, sfConfig::get('fundraising_list_all_sand'));
-//	$url_to_send = str_repace("{pageShortName}",$app_id, $url);
+//Yes About Authentication »/
+$page_create_data = <<<EOF
+<pageRegistration xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+<activityType i:nil="true" />
+<attribution i:nil="true" />
+  <charityFunded>false</charityFunded>
+  <charityId>2357</charityId>
+  <charityOptIn>false</charityOptIn>
+<eventDate i:nil="true" />
+  <eventId>355883</eventId>
+<eventName i:nil="true" />
+  <justGivingOptIn>false</justGivingOptIn>
+  <pageShortName>my-test-pageegA9karGrUGm8B09tqlmIA</pageShortName>
+  <pageTitle>my test page title</pageTitle>
+<reference i:nil="true" />
+  <targetAmount>2000</targetAmount>
+</pageRegistration>
+EOF;
+
+		$params = array('http' => array(
+                		'method' => 'PUT',                		
+                		'content' => $page_create_data));
+
+        $ctx = stream_context_create($params);
+        $response = file_put_contents($page_url, false, $ctx);
+
+echo'<pre>';
+print_r($response);
+echo'</pre>';
+/*
+	$stream = stream_context_create();
+	$response = file_put_contents($page_url, $page_create_data);	
+	echo'<pre>';
+	print_r($response);
+*/
 	die();
   }
 }
