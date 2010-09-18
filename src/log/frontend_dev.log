@@ -211,3 +211,31 @@ Sep 18 18:09:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilt
 Sep 18 18:09:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
 Sep 18 18:09:43 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
 Sep 18 18:09:43 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 48 (file_put_contents() expects parameter 3 to be long, resource given)
+Sep 18 18:10:46 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 18:10:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 18:10:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 18:10:46 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 18:10:46 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 46 (file_put_contents(https://api.justgiving.com/50694b0a/v1/fundraising/pages) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: HTTP wrapper does not support writeable connections)
+Sep 18 18:12:54 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 18:12:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 18:12:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 18:12:54 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 18:12:54 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/aggreg8/src/apps/frontend/modules/default/actions/actions.class.php on line 44 (file_put_contents(https://api.justgiving.com/50694b0a/v1/fundraising/pages) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: HTTP wrapper does not support writeable connections)
+Sep 18 18:26:15 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 18:26:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 18:26:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 18:26:15 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 19:05:22 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 19:05:22 symfony [info] {myUser} Automatic user logout due to timeout
+Sep 18 19:05:22 symfony [info] {myUser} User is not authenticated
+Sep 18 19:05:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 19:05:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 19:05:22 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 19:11:35 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 19:11:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 19:11:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 19:11:35 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 18 19:35:29 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 18 19:35:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 18 19:35:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 18 19:35:29 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
