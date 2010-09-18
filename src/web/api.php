@@ -55,7 +55,7 @@ function makeCurlRequest( $endpoint, $payload, $params = null, $header = array()
 }
 
 
-$endpoint = "https://api.staging.justgiving.com/decbf1d2/v1/fundraising/pages";
+$endpoint = "https://api.staging.justgiving.com/50694b0a/v1/fundraising/pages";
 
 $params = ""; //,comments,attendees
 /*
@@ -80,8 +80,8 @@ EOF;
 */
 $payload= "";
 
-//$login = base64_encode("dan@dogsbody.org:trustno1");
-$login = base64_encode("apitests@justgiving.com:password");
+$login = base64_encode("dan@dogsbody.org:trustno1");
+//$login = base64_encode("apitests@justgiving.com:password");
 
 $header  = array("Content-Type: application/xml", "Authorize: Basic " . $login);
 
