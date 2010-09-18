@@ -15,23 +15,8 @@ function makeCurlRequest( $endpoint, $payload, $params = null, $isXML = true, $i
 	$ch = curl_init();
 	
 	$login = base64_encode("dan@dogsbody.org:trustno1");
-	// $login = base64_encode("apitests@justgiving.com:password");
-//	$details = "test@justgiving.com:testpassword";
-//	$login = base64_encode($details);	
-	
-//	$header = array();
 
-//	$header  = array("Content-type: text/xml", "Authorize: Basic " . $login);
-//	$header  = array("Content-type" => "application/xml", "Authorize" => "Basic " . $login);	
 	$header  = array("Content-Type: application/xml", "Authorize: Basic " . $login);
-	
-	echo'<pre>';
-	print_r($header);
-	echo'</pre>';
-//	die;
-	
-	// Authorize header
-	
 	
 /*
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
