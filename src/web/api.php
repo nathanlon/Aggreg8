@@ -3,9 +3,6 @@
 // function makeCurlRequest($callName, $endpoint, $params = null, $isXML = true, $isTestMode = false) {		
 function makeCurlRequest( $endpoint, $payload, $params = null, $isXML = true, $isTestMode = false) 
 {	
-//	$username = base64_encode("dan@dogsbody.org");  // dan@dogsbody.org
-//	$password = base64_encode("trustno1");
-
 	//add any parameters directly to the end point.
 	if (!is_null($params))
 	{
@@ -17,17 +14,29 @@ function makeCurlRequest( $endpoint, $payload, $params = null, $isXML = true, $i
 	$ch = curl_init($endpoint);
 	$ch = curl_init();
 	
-	$header = array();
-//	$header[] = "Host: www.supplierswebsite.com";
-	$header[] = "Content-type: text/xml";
-	$header[] = "Content-length: ".strlen($payload) . "\r\n";
-	$header[] = "Authorization: Basic " . $username.":".$password;	
+	//$login = base64_encode("dan@dogsbody.org:trustno1");
+	$login = base64_encode("apitests@justgiving.com:password");
+//	$details = "test@justgiving.com:testpassword";
+//	$login = base64_encode($details);	
+	
+//	$header = array();
+
+//	$header  = array("Content-type: text/xml", "Authorize: Basic " . $login);
+//	$header  = array("Content-type" => "application/xml", "Authorize" => "Basic " . $login);	
+	$header  = array("Content-Type: application/xml", "Authorize: Basic " . $login);
+	
+	echo'<pre>';
+	print_r($header);
+	echo'</pre>';
+//	die;
+	
 	// Authorize header
+	
 	
 /*
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
  'Authorization: ' . CJ_API_KEY)
-  'X-Authorization: ' . );
+ 'X-Authorization: ' . );
 */	
 	$headers = curl_getinfo($ch, CURLINFO_HEADER_OUT);
 	
@@ -36,8 +45,9 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 	curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, 0 );
 	curl_setopt( $ch, CURLOPT_SSL_VERIFYHOST, 0 );	
 	curl_setopt( $ch, CURLOPT_HTTPHEADER , $header);
-	curl_setopt( $ch, CURLOPT_POST   , 0); //was 1
-	curl_setopt( $ch, CURLOPT_POSTFIELDS , $payload );
+	curl_setopt( $ch, CURLOPT_HTTPGET , 1);
+	//curl_setopt( $ch, CURLOPT_POST   , 0); //was 1
+	//curl_setopt( $ch, CURLOPT_POSTFIELDS , $payload );
 	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
 
 	$result = curl_exec($ch);
@@ -70,7 +80,9 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 }
 
 
-$endpoint = "https://api.staging.justgiving.com/dan@dogsbody.org/v1/fundraising/pages";
+$endpoint = "https://api.staging.justgiving.com/decbf1d2/v1/fundraising/pages";
+
+
 
 $params = ""; //,comments,attendees
 /*
@@ -99,3 +111,6 @@ $xml = makeCurlRequest($endpoint, $payload, $params,  true);
 echo'<pre>';
 print_r($xml);
 echo'</pre>';
+
+// ZGFuQGRvZ3Nib2R5Lm9yZzp0cnVzdG5vMQ==
+// ZGFuQGRvZ3Nib2R5Lm9yZzp0cnVzdG5vMQ==
