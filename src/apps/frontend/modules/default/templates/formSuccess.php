@@ -1,7 +1,6 @@
-<?php //echo $form->render() ?>
+<?php echo $form->renderFormTag(url_for('@form?event_code='.$eventCode)) ?>
 
-    <form id="form_15307" class="appnitro"  method="post" action="">
-                <div class="form_description">
+<div class="form_description">
         <h2>Aggreg8.me</h2>
         <p>Create a new Just Giving page</p>
     </div>
@@ -11,12 +10,20 @@
         <h3>New Page</h3>
         <p></p>
     </li>
-            <li id="li_1" >
-    <label class="description" for="element_1">Page Title</label>
+    <li id="li_1" >
+    <label class="description" for="element_11">Event Id</label>
+    <div>
+        <?php echo $form['just_giving_event_id']->render() ?>
+    </div>
+    </li>
+
+    <li id="li_1" >
+    <label class="description" for="element_11">Page Title</label>
     <div>
         <?php echo $form['title']->render() ?>
     </div>
-    </li>		<li id="li_11" >
+    </li>
+    <li id="li_11" >
     <label class="description" for="element_11">Short Name</label>
     <div>
         <?php echo $form['short_name']->render() ?>
@@ -39,4 +46,5 @@
             <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
     </li>
         </ul>
+<?php echo $form->renderHiddenFields() ?>
     </form>

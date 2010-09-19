@@ -22,15 +22,14 @@ JustGivingEvent:
 Page:
   columns:
     id:                       { type: integer(8), primary: true, autoincrement: true }
-    just_giving_page_code:    varchar(20)
+    title:                    varchar(200)
+    short_name:               varchar(200)
+    target_amount:            decimal(20,2)
     charity_code:             varchar(20)
     charity_name:             varchar(200)
     money_raised:             decimal(20,2)
     just_giving_event_id:     integer
     user:                     varchar(200)
-    target_amount:            decimal(20,2)
-    short_name:               varchar(200)
-    title:                    varchar(200)
   relations:
     JustGivingEvent:
       local:                  just_giving_event_id

@@ -12,4 +12,9 @@
  */
 class JustGivingEvent extends BaseJustGivingEvent
 {
+    public function __toString()
+    {
+        return $this->Event->name . ' - ' . $this->jg_event_code;
+    }
+
 }

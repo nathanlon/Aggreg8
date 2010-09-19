@@ -12,70 +12,90 @@ JustGivingEvent:
 
 Page:
   first_page:
-    just_giving_page_code:    1001
+    title:                    Page 1
+    short_name:               page1
+    target_amount:            50.00
     charity_code:             50001
     charity_name:             NSPCC
     user:                     Dane Uddin
     money_raised:             82.61
     JustGivingEvent:          [first_jge]
   page2:
-    just_giving_page_code:    1002
+    title:                    Page 2
+    short_name:               page2
+    target_amount:            50.00
     charity_code:             50001
     charity_name:             NSPCC
     user:                     Carey Kardas
     money_raised:             728.89
     JustGivingEvent:          [first_jge]
   page3:
-    just_giving_page_code:    1003
+    title:                    Page 3
+    short_name:               page3
+    target_amount:            50.00
     charity_code:             50001
     charity_name:             NSPCC
     user:                     Hue Fouquet
     money_raised:             880.81
     JustGivingEvent:          [first_jge]
   page4:
-    just_giving_page_code:    1004
+    title:                    Page 4
+    short_name:               page4
+    target_amount:            50.00
     charity_code:             50001
     charity_name:             NSPCC
     user:                     Marcel Feary
     money_raised:             183.51
     JustGivingEvent:          [first_jge]
   page5:
-    just_giving_page_code:    1005
+    title:                    Page 5
+    short_name:               page5
+    target_amount:            50.00
     charity_code:             50002
     charity_name:             Cancer Research UK
     user:                     Ja Trupiano
     money_raised:             25.31
     JustGivingEvent:          [first_jge]
   page6:
-    just_giving_page_code:    1006
+    title:                    Page 6
+    short_name:               page6
+    target_amount:            50.00
     charity_code:             50002
     charity_name:             Cancer Research UK
     user:                     Darius Lamery
     money_raised:             528.27
     JustGivingEvent:          [first_jge]
   page7:
-    just_giving_page_code:    1007
+    title:                    Page 7
+    short_name:               page7
+    target_amount:            50.00
     charity_code:             50002
     charity_name:             Cancer Research UK
     user:                     Marcel Broersma
     money_raised:             524.34
     JustGivingEvent:          [first_jge]
   page8:
-    just_giving_page_code:    1008
+    title:                    Page 8
+    short_name:               page8
+    target_amount:            50.00
     charity_code:             50003
     charity_name:             British Heart Foundation
     user:                     Thaddeus Hajdas
     money_raised:             421.68
     JustGivingEvent:          [first_jge]
   page9:
-    just_giving_page_code:    1009
+    title:                    Page 9
+    short_name:               page9
+    target_amount:            50.00
     charity_code:             50003
     charity_name:             British Heart Foundation
     user:                     Ja Rufino
     money_raised:             985.40
     JustGivingEvent:          [first_jge]
   page10:
-    just_giving_page_code:    1010
+    title:                    Page 10
+    short_name:               page10
+    target_amount:            50.00
     charity_code:             50004
     charity_name:             Great Ormond Street Hospital
     user:                     Moises Tenholder

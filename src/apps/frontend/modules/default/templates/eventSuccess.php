@@ -27,9 +27,9 @@
 
     <?php foreach ($pages as $page): ?>
  	<tr class="rowb">
-		<td class="col1 cell"><?php echo $page->user ?></td>
+		<td class="col1 cell"><a href="http://v3.staging.justgiving.com/<?php echo $page->short_name ?>"><?php echo $page->title ?></a></td>
 		<td class="col2 cell"><?php echo $page->charity_name ?></td>
-		<td class="col3 cell">&pound;<?php echo $page->money_raised ?></td>
+		<td class="col3 cell">&pound;<?php echo ($page->money_raised != null)?$page->money_raised : '0.00'  ?></td>
 	</tr>
     <?php endforeach ?>
 
