@@ -23,16 +23,10 @@ class defaultActions extends sfActions
 		
 		$this->pages = $p->execute();
 		
-		//
-		$this->executeTestAPICalls();
-				
-	}
+		$this->eventTotal = '123.00';//$event->total_money;
 
-	// collection of API calls
-	public function executeTestAPICalls() 
-	{
         
-
 	}
+
 
 }
