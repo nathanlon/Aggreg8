@@ -1702,3 +1702,20 @@ Sep 19 04:55:46 symfony [info] {sfWebDebugLogger} Action "default/index" 4058.03
 Sep 19 04:55:46 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
 Sep 19 04:55:46 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 26.64 ms (1)
 Sep 19 04:55:46 symfony [info] {sfWebResponse} Send content (35234 o)
+Sep 19 10:32:30 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 19 10:32:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 19 10:32:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 19 10:32:30 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 19 10:32:30 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 19 10:32:30 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.just_giving_page_code AS p__just_giving_page_code, p.charity_code AS p__charity_code, p.charity_name AS p__charity_name, p.money_raised AS p__money_raised, p.just_giving_event_id AS p__just_giving_event_id FROM page p - ()
+Sep 19 10:32:31 symfony [info] {sfPHPView} Render "/media/psf/aggreg8/src/apps/frontend/modules/default/templates/indexSuccess.php"
+Sep 19 10:32:31 symfony [info] {sfPHPView} Decorate content with "/media/psf/aggreg8/src/apps/frontend/templates/layout.php"
+Sep 19 10:32:31 symfony [info] {sfPHPView} Render "/media/psf/aggreg8/src/apps/frontend/templates/layout.php"
+Sep 19 10:32:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 19 10:32:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 19 10:32:31 symfony [info] {sfWebDebugLogger} Configuration 672.56 ms (9)
+Sep 19 10:32:31 symfony [info] {sfWebDebugLogger} Factories 393.98 ms (1)
+Sep 19 10:32:31 symfony [info] {sfWebDebugLogger} Action "default/index" 36.40 ms (1)
+Sep 19 10:32:31 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Sep 19 10:32:31 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 103.47 ms (1)
+Sep 19 10:32:31 symfony [info] {sfWebResponse} Send content (31955 o)
