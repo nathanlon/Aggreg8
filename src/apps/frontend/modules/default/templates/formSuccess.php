@@ -6,7 +6,7 @@
     </div>
         <ul >
 
-      
+<?php echo $error ?>      
         <h3>New Page</h3>
         <p></p>
     </li>
