@@ -5,19 +5,14 @@ class JustGivingAPI
 	// constructor
 	private $username;
 	private $password;
-	
-	
-	public function __construct()
-	{
-		
-	}
-	
+
+
 	// Gets the status of a donation using donationId. 
 	// --------------------
 	// HTTP Method: GET
 	// Auth: No
-	// 
-	public function donationRecieveStatus($donation_id) 
+	//
+	public static function donationRecieveStatus($donation_id) 
 	{
 		if(!$donation_id) {
 			return false; // throw an exception here
@@ -28,7 +23,7 @@ class JustGivingAPI
 			// add the search term
 			$url .= "?donationId=".$donation_id;
 
-			$resp = $this->makeCurlRequest( $url, $payload = "", $auth = false, $http_method = "GET" );
+			$resp = self::makeCurlRequest( $url, $payload = "", $auth = false, $http_method = "GET" );
 
 			return $resp;			
 		}		
@@ -39,7 +34,7 @@ class JustGivingAPI
 	// HTTP Method: PUT
 	// Auth: No
 	//
-	public function accountCreate($country, $county_or_state, $line1, 
+	public static function accountCreate($country, $county_or_state, $line1,
 								  $line2, $postcode_or_zipcode, $town_or_city, 
 								  $email, $first_name, $last_name, 
 								  $password, $reference, $title) {
@@ -67,7 +62,7 @@ XMLDOC;
 		$url = sfConfig::get('app_account_create_sand');
 
 		// make the API call
-		$resp = $this->makeCurlRequest( $url, $payload, $auth = true, $http_method = "PUT" );
+		$resp = self::makeCurlRequest( $url, $payload, $auth = true, $http_method = "PUT" );
 
 		return $resp;		
 
@@ -78,7 +73,7 @@ XMLDOC;
 	// HTTP Method: GET
 	// Auth: No
 	//
-	public function listAllFundRaisingPagesByEmail($email) 
+	public static function listAllFundRaisingPagesByEmail($email)
 	{
 		if(!$email) {
 			return false; // throw an exception here
@@ -88,7 +83,7 @@ XMLDOC;
 			// add the search term
 			$url .= "?email=".$email;
 
-			$resp = $this->makeCurlRequest( $url, $payload = "", $auth = true, $http_method = "GET" );
+			$resp = self::makeCurlRequest( $url, $payload = "", $auth = true, $http_method = "GET" );
 			return $resp;			
 		}				
 	}
@@ -98,10 +93,10 @@ XMLDOC;
 	// HTTP Method: GET
 	// Auth: Yes
 	// 
-	public function listAllFundRaisingPagesForUser() 
+	public static function listAllFundRaisingPagesForUser()
 	{
 		$url = sfConfig::get("app_fundraising_list_all_sand");
-		$resp = $this->makeCurlRequest( $url, $payload = "", $auth = true, $http_method = "GET" );
+		$resp = self::makeCurlRequest( $url, $payload = "", $auth = true, $http_method = "GET" );
 		return $resp;
 	}
 
@@ -114,7 +109,7 @@ XMLDOC;
 	// 			page - for pagination
 	// 			pageSize - restricts result set
 	// 
-	public function charitySearch($term, $page="", $page_size="") 
+	public static function charitySearch($term, $page="", $page_size="")
 	{
 		if(!$term) {
 			return false; // throw an exception here
@@ -130,7 +125,7 @@ XMLDOC;
 			(!empty($page_size)) ? $url.= "&pageSize=".$page_size : $url.="";
 
 			// make the API call
-			$resp = $this->makeCurlRequest( $url, $payload = "", $auth = false, $http_method = "GET" );
+			$resp = self::makeCurlRequest( $url, $payload = "", $auth = false, $http_method = "GET" );
 			return $resp;					
 		}
 	}	
@@ -141,13 +136,13 @@ XMLDOC;
 	// Auth: No	
 	// Lists all fundraising Pages for the supplied email. 
 	// 	
-	public function retrievePageDonations() 
+	public static function retrievePageDonations()
 	{
 		$url = sfConfig::get("app_account_list_all_pages_sand");
 		$url = str_replace("{email}", sfConfig::get('app_email'), $url);
 
 		// make the API call
-		$resp = $this->makeCurlRequest( $url, $payload = "", $auth = false, $http_method = "GET" );
+		$resp = self::makeCurlRequest( $url, $payload = "", $auth = false, $http_method = "GET" );
 		return $resp;
 	}
 
@@ -158,7 +153,7 @@ XMLDOC;
 	// Registers a Fundraising Page on the JustGiving.com website, 
 	// for example justgiving.com/John-Vaughan-Fowler. 	
 	// 
-	public function createPage( $charity_funded , $charity_id , $charity_opt_in, 
+	public static function createPage( $charity_funded , $charity_id , $charity_opt_in,
 								$event_id, $event_name, $just_giving_opt_in, 
 								$page_short_name, $page_title, $activity_type_id, 
 								$target_amount ) {
@@ -186,7 +181,7 @@ XMLDOC;
 		$url = sfConfig::get('app_fundraising_create_sand');
 
 		// make the API call
-		$resp = $this->makeCurlRequest( $url, $payload, $auth = true, $http_method = "PUT" );
+		$resp = self::makeCurlRequest( $url, $payload, $auth = true, $http_method = "PUT" );
 
 		return $resp;
 	}
@@ -194,7 +189,7 @@ XMLDOC;
 	/**
 	*
 	*/
-	public function getListOfUrls()
+	public static function getListOfUrls()
 	{		
 		$url_ar['account_create']['sand']='https://api.staging.justgiving.com/50694b0a/v1/account';
 		/*
@@ -244,7 +239,7 @@ XMLDOC;
 	* $auth = authentication required (true/false)  
 	* $http_method = http request type ( GET / PUT / POST )
 	*/
-	public function makeCurlRequest( $endpoint, $payload, $auth = false, $http_method = null ) 
+	public static function makeCurlRequest( $endpoint, $payload, $auth = false, $http_method = null )
 	{	
 		if(!$http_method) {
 
