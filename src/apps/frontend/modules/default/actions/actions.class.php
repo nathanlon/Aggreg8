@@ -47,8 +47,9 @@ class defaultActions extends sfActions
 
         $this->eventCode = $request->getParameter('event_code');
         $this->form = new PageCreationForm();
-
+        $this->error = '';
         $this->form->setDefault('just_giving_event_id', 1);
+        $this->form->setDefault('charity_code', '2357');
 
         if ($request->isMethod(sfWebRequest::POST))
         {
@@ -69,35 +70,37 @@ class defaultActions extends sfActions
 								$jgEventId, $title, 'false',
 								$shortName, $title, null,
 								$targetAmount );
-
-                $uri = (string) $response->next->uri;
-
-                if (!is_null($uri))
+                if (!is_null($response))
                 {
-                    //find the event id from the event code.
-                    $event = Doctrine_Core::getTable('Event')->findOneByCode($this->eventCode);
+                    $uri = (string) $response->next->uri;
 
-                    $page = Doctrine_Core::getTable('Page')->create(array(
-                        'title'      =>      $title,
-                        'short_name' =>      $shortName,
-                        'target_amount' =>   $targetAmount,
-                        'charity_code' =>    $charityCode,
-                        'just_giving_event_id' => $jgEventId
-                        //'JustGivingEventId' => $jgEventId
-                    ));
+                    if ($uri != '')
+                    {
+                        //find the event id from the event code.
+                        //$event = Doctrine_Core::getTable('Event')->findOneByCode($this->eventCode);
 
-                    $page->save();
+                        $page = Doctrine_Core::getTable('Page')->create(array(
+                            'title'      =>      $title,
+                            'short_name' =>      $shortName,
+                            'target_amount' =>   $targetAmount,
+                            'charity_code' =>    $charityCode,
+                            'just_giving_event_id' => $jgEventId
+                            //'JustGivingEventId' => $jgEventId
+                        ));
 
-                    $this->redirect($uri);
+                        $page->save();
+
+                        $this->redirect($uri);
+                    }
+                    else
+                    {
+                        $this->error = 'Not able to create this JustGiving page.';
+                    }
                 }
-
-                echo "URI = ".$uri;
-
-                echo "TITLE IS ".$title;
             }
             else
             {
-                echo "NOT VALID";
+                $this->error = "Form is invalid.";
             }
 
         }

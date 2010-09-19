@@ -1,5 +1,5 @@
 
-		<form id="form_15307" class="appnitro"  method="post" action="/frontend_dev.php/event/good/form">
+		<form id="form_15307" class="appnitro"  method="get" action="/frontend_dev.php/event/good/form">
 					<div class="form_description">
 			<h2>Aggreg8.me</h2>
 			<p>Grand totals for <?php echo $event->name ?>.</p>
