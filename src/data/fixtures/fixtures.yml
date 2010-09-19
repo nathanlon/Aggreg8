@@ -81,3 +81,20 @@ Page:
     user:                     Moises Tenholder
     money_raised:             377.84
     JustGivingEvent:          [first_jge]
+
+Charity:
+  columns:
+    code:                     2013
+    name:                     NSPCC
+  columns2:
+    code:                     2357
+    name:                     Cancer Research UK
+  columns3:
+    code:                     2116
+    name:                     Macmillan Cancer Support
+  columns4:
+    code:                     50
+    name:                     Marie Curie Cancer Care
+  columns5:
+    code:                     183092
+    name:                     British Heart Foundation
