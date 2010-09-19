@@ -172,7 +172,6 @@ $payload = <<<XMLDOC
   <justGivingOptIn>$just_giving_opt_in</justGivingOptIn>
   <pageShortName>$page_short_name</pageShortName>
   <pageTitle>$page_title</pageTitle>
-  <activityTypeId>$activity_type_id</activityTypeId>
 <reference i:nil="true" />
   <targetAmount>$target_amount</targetAmount>
 </pageRegistration>

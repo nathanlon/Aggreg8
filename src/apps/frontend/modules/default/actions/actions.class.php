@@ -37,4 +37,16 @@ class defaultActions extends sfActions
 	}
 
 
+    /**
+    * Executes index action
+    *
+    * @param sfRequest $request A request object
+    */
+    public function executeForm(sfWebRequest $request)
+    {
+        $this->form = new PageForm();
+    }
+
+
+
 }

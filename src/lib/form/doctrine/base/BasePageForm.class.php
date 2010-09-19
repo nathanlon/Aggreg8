@@ -21,6 +21,10 @@ abstract class BasePageForm extends BaseFormDoctrine
       'charity_name'          => new sfWidgetFormInputText(),
       'money_raised'          => new sfWidgetFormInputText(),
       'just_giving_event_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('JustGivingEvent'), 'add_empty' => true)),
+      'user'                  => new sfWidgetFormInputText(),
+      'target_amount'         => new sfWidgetFormInputText(),
+      'short_name'            => new sfWidgetFormInputText(),
+      'title'                 => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
@@ -30,6 +34,10 @@ abstract class BasePageForm extends BaseFormDoctrine
       'charity_name'          => new sfValidatorPass(array('required' => false)),
       'money_raised'          => new sfValidatorNumber(array('required' => false)),
       'just_giving_event_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('JustGivingEvent'), 'required' => false)),
+      'user'                  => new sfValidatorPass(array('required' => false)),
+      'target_amount'         => new sfValidatorNumber(array('required' => false)),
+      'short_name'            => new sfValidatorPass(array('required' => false)),
+      'title'                 => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('page[%s]');

@@ -9,6 +9,18 @@
     <?php include_javascripts() ?>
   </head>
   <body>
-    <?php echo $sf_content ?>
+
+	<img id="top" src="/images/top.png" alt="">
+	<div id="form_container">
+		<h1><a>Aggreg8.me</a></h1>
+
+        <?php echo $sf_content ?>
+
+		<div id="footer">
+			A Charity Hack 2010 project
+		</div>
+	</div>
+	<img id="bottom" src="/images/bottom.png" alt="">
+
   </body>
 </html>

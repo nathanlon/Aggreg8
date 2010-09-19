@@ -1,8 +1,5 @@
 
-	<img id="top" src="/images/top.png" alt="">
-	<div id="form_container">
-		<h1><a>Aggreg8.me</a></h1>
-		<form id="form_15307" class="appnitro"  method="post" action="form.html">
+		<form id="form_15307" class="appnitro"  method="post" action="/event/good/form">
 					<div class="form_description">
 			<h2>Aggreg8.me</h2>
 			<p>Grand totals for <?php echo $event->name ?>.</p>
@@ -39,8 +36,3 @@
  </table>
 			</ul>
 		</form>
-		<div id="footer">
-			A Charity Hack 2010 project
-		</div>
-	</div>
-	<img id="bottom" src="/images/bottom.png" alt="">

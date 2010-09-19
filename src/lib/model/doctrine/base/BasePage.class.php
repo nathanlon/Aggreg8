@@ -12,6 +12,9 @@
  * @property decimal $money_raised
  * @property integer $just_giving_event_id
  * @property varchar $user
+ * @property decimal $target_amount
+ * @property varchar $short_name
+ * @property varchar $title
  * @property JustGivingEvent $JustGivingEvent
  * 
  * @method integer         getId()                    Returns the current record's "id" value
@@ -21,6 +24,9 @@
  * @method decimal         getMoneyRaised()           Returns the current record's "money_raised" value
  * @method integer         getJustGivingEventId()     Returns the current record's "just_giving_event_id" value
  * @method varchar         getUser()                  Returns the current record's "user" value
+ * @method decimal         getTargetAmount()          Returns the current record's "target_amount" value
+ * @method varchar         getShortName()             Returns the current record's "short_name" value
+ * @method varchar         getTitle()                 Returns the current record's "title" value
  * @method JustGivingEvent getJustGivingEvent()       Returns the current record's "JustGivingEvent" value
  * @method Page            setId()                    Sets the current record's "id" value
  * @method Page            setJustGivingPageCode()    Sets the current record's "just_giving_page_code" value
@@ -29,6 +35,9 @@
  * @method Page            setMoneyRaised()           Sets the current record's "money_raised" value
  * @method Page            setJustGivingEventId()     Sets the current record's "just_giving_event_id" value
  * @method Page            setUser()                  Sets the current record's "user" value
+ * @method Page            setTargetAmount()          Sets the current record's "target_amount" value
+ * @method Page            setShortName()             Sets the current record's "short_name" value
+ * @method Page            setTitle()                 Sets the current record's "title" value
  * @method Page            setJustGivingEvent()       Sets the current record's "JustGivingEvent" value
  * 
  * @package    aggreg8
@@ -68,6 +77,19 @@ abstract class BasePage extends sfDoctrineRecord
              'type' => 'integer',
              ));
         $this->hasColumn('user', 'varchar', 200, array(
+             'type' => 'varchar',
+             'length' => 200,
+             ));
+        $this->hasColumn('target_amount', 'decimal', 20, array(
+             'type' => 'decimal',
+             'length' => 20,
+             'scale' => '2',
+             ));
+        $this->hasColumn('short_name', 'varchar', 200, array(
+             'type' => 'varchar',
+             'length' => 200,
+             ));
+        $this->hasColumn('title', 'varchar', 200, array(
              'type' => 'varchar',
              'length' => 200,
              ));

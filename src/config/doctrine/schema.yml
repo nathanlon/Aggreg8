@@ -28,6 +28,9 @@ Page:
     money_raised:             decimal(20,2)
     just_giving_event_id:     integer
     user:                     varchar(200)
+    target_amount:            decimal(20,2)
+    short_name:               varchar(200)
+    title:                    varchar(200)
   relations:
     JustGivingEvent:
       local:                  just_giving_event_id
