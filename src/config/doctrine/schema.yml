@@ -1,7 +1,12 @@
 Event:
   columns:
     id:                       { type: integer(8), primary: true, autoincrement: true }
+    code:                     varchar(50)
+    name:                     varchar(200)
     total_money:              decimal(20,2)
+  relations:
+    JustGivingEvent:
+      onDelete
 
 JustGivingEvent:
   columns:
@@ -10,10 +15,9 @@ JustGivingEvent:
     event_id:                 integer
   relations:
     Event:
-      alias:                  Event
       local:                  event_id
       foreign:                id
-      type:                   one
+      onDelete:               CASCADE
 
 Page:
   columns:
@@ -23,12 +27,12 @@ Page:
     charity_name:             varchar(200)
     money_raised:             decimal(20,2)
     just_giving_event_id:     integer
+    user:                     varchar(200)
   relations:
     JustGivingEvent:
-      alias:                  JustGivingEvent
       local:                  just_giving_event_id
       foreign:                id
-      type:                   one
+      onDelete:               CASCADE
 
 charity:
   columns:

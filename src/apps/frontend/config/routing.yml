@@ -1,6 +1,14 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+event:
+  url:   /event/:event_code
+  param: { module: default, action: event, event_code: 'good' }
+
+form:
+  url:   /event/:event_code/form
+  param: { module: default, action: form, event_code: 'good' } 
+
 # default rules
 homepage:
   url:   /
@@ -8,9 +16,9 @@ homepage:
 
 # generic rules
 # please, remove them by adding more specific rules
-default_index:
-  url:   /:module
-  param: { action: index }
+#default_index:
+#  url:   /:module
+#  param: { action: index }
 
-default:
-  url:   /:module/:action/*
+#default:
+#  url:   /:module/:action/*

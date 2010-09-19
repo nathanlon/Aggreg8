@@ -10,21 +10,29 @@
  */
 class defaultActions extends sfActions
 {
+    public function executeIndex(sfWebRequest $request)
+	{
+        
+    }
+
 	/**
 	* Executes index action
 	*
 	* @param sfRequest $request A request object
 	*/
-	public function executeIndex(sfWebRequest $request)
+	public function executeEvent(sfWebRequest $request)
 	{
+        $eventCode = $request->getParameter('event_code');
+        
+        $this->event = Doctrine_Core::getTable('Event')->findOneByCode($eventCode);
+
 		// get a  list of funds by fund name
 		$p = Doctrine_Query::create()->select('p.*')
 		  					   		 ->from('Page p');
-		
-		$this->pages = $p->execute();
-		
-		$this->eventTotal = '123.00';//$event->total_money;
+                                     //->where();
 
+
+		$this->pages = $p->execute();
         
 	}
 

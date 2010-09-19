@@ -52,7 +52,8 @@ abstract class BaseJustGivingEvent extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Event', array(
              'local' => 'event_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE'));
 
         $this->hasMany('Page', array(
              'local' => 'id',

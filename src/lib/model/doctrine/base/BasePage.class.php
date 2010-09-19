@@ -11,6 +11,7 @@
  * @property varchar $charity_name
  * @property decimal $money_raised
  * @property integer $just_giving_event_id
+ * @property varchar $user
  * @property JustGivingEvent $JustGivingEvent
  * 
  * @method integer         getId()                    Returns the current record's "id" value
@@ -19,6 +20,7 @@
  * @method varchar         getCharityName()           Returns the current record's "charity_name" value
  * @method decimal         getMoneyRaised()           Returns the current record's "money_raised" value
  * @method integer         getJustGivingEventId()     Returns the current record's "just_giving_event_id" value
+ * @method varchar         getUser()                  Returns the current record's "user" value
  * @method JustGivingEvent getJustGivingEvent()       Returns the current record's "JustGivingEvent" value
  * @method Page            setId()                    Sets the current record's "id" value
  * @method Page            setJustGivingPageCode()    Sets the current record's "just_giving_page_code" value
@@ -26,6 +28,7 @@
  * @method Page            setCharityName()           Sets the current record's "charity_name" value
  * @method Page            setMoneyRaised()           Sets the current record's "money_raised" value
  * @method Page            setJustGivingEventId()     Sets the current record's "just_giving_event_id" value
+ * @method Page            setUser()                  Sets the current record's "user" value
  * @method Page            setJustGivingEvent()       Sets the current record's "JustGivingEvent" value
  * 
  * @package    aggreg8
@@ -64,6 +67,10 @@ abstract class BasePage extends sfDoctrineRecord
         $this->hasColumn('just_giving_event_id', 'integer', null, array(
              'type' => 'integer',
              ));
+        $this->hasColumn('user', 'varchar', 200, array(
+             'type' => 'varchar',
+             'length' => 200,
+             ));
     }
 
     public function setUp()
@@ -71,6 +78,7 @@ abstract class BasePage extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('JustGivingEvent', array(
              'local' => 'just_giving_event_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE'));
     }
 }

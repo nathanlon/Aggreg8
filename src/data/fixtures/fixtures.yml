@@ -1,7 +1,9 @@
 
 Event:
   first:
-    total_money:              0
+    code:                     good
+    name:                     Gooddwood Roller Marathon 2010
+    total_money:              360.30
 
 JustGivingEvent:
   first_jge:
@@ -10,9 +12,72 @@ JustGivingEvent:
 
 Page:
   first_page:
-    just_giving_page_code:    PAGECODE
-    charity_code:             CHARITYCODE
-    charity_name:             CHARITYNAME
-    money_raised:             0
+    just_giving_page_code:    1001
+    charity_code:             50001
+    charity_name:             NSPCC
+    user:                     Dane Uddin
+    money_raised:             82.61
     JustGivingEvent:          [first_jge]
-
+  page2:
+    just_giving_page_code:    1002
+    charity_code:             50001
+    charity_name:             NSPCC
+    user:                     Carey Kardas
+    money_raised:             728.89
+    JustGivingEvent:          [first_jge]
+  page3:
+    just_giving_page_code:    1003
+    charity_code:             50001
+    charity_name:             NSPCC
+    user:                     Hue Fouquet
+    money_raised:             880.81
+    JustGivingEvent:          [first_jge]
+  page4:
+    just_giving_page_code:    1004
+    charity_code:             50001
+    charity_name:             NSPCC
+    user:                     Marcel Feary
+    money_raised:             183.51
+    JustGivingEvent:          [first_jge]
+  page5:
+    just_giving_page_code:    1005
+    charity_code:             50002
+    charity_name:             Cancer Research UK
+    user:                     Ja Trupiano
+    money_raised:             25.31
+    JustGivingEvent:          [first_jge]
+  page6:
+    just_giving_page_code:    1006
+    charity_code:             50002
+    charity_name:             Cancer Research UK
+    user:                     Darius Lamery
+    money_raised:             528.27
+    JustGivingEvent:          [first_jge]
+  page7:
+    just_giving_page_code:    1007
+    charity_code:             50002
+    charity_name:             Cancer Research UK
+    user:                     Marcel Broersma
+    money_raised:             524.34
+    JustGivingEvent:          [first_jge]
+  page8:
+    just_giving_page_code:    1008
+    charity_code:             50003
+    charity_name:             British Heart Foundation
+    user:                     Thaddeus Hajdas
+    money_raised:             421.68
+    JustGivingEvent:          [first_jge]
+  page9:
+    just_giving_page_code:    1009
+    charity_code:             50003
+    charity_name:             British Heart Foundation
+    user:                     Ja Rufino
+    money_raised:             985.40
+    JustGivingEvent:          [first_jge]
+  page10:
+    just_giving_page_code:    1010
+    charity_code:             50004
+    charity_name:             Great Ormond Street Hospital
+    user:                     Moises Tenholder
+    money_raised:             377.84
+    JustGivingEvent:          [first_jge]
