@@ -1730,3 +1730,37 @@ Sep 19 10:16:20 symfony [info] {sfWebDebugLogger} Configuration 1.76 ms (8)
 Sep 19 10:16:20 symfony [info] {sfWebDebugLogger} Factories 50.27 ms (1)
 Sep 19 10:16:20 symfony [info] {sfWebDebugLogger} Action "default/index" 118.56 ms (1)
 Sep 19 10:16:20 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (1)
+Sep 19 10:29:07 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 19 10:29:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 19 10:29:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 19 10:29:07 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 19 10:29:07 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 19 10:29:07 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.just_giving_page_code AS p__just_giving_page_code, p.charity_code AS p__charity_code, p.charity_name AS p__charity_name, p.money_raised AS p__money_raised, p.just_giving_event_id AS p__just_giving_event_id FROM page p - ()
+Sep 19 10:29:07 symfony [info] {sfPHPView} Render "/home/.sites/137/site24/web/src/apps/frontend/modules/default/templates/indexSuccess.php"
+Sep 19 10:29:07 symfony [info] {sfPHPView} Decorate content with "/home/.sites/137/site24/web/src/apps/frontend/templates/layout.php"
+Sep 19 10:29:07 symfony [info] {sfPHPView} Render "/home/.sites/137/site24/web/src/apps/frontend/templates/layout.php"
+Sep 19 10:29:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 19 10:29:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 19 10:29:07 symfony [info] {sfWebDebugLogger} Configuration 17.95 ms (10)
+Sep 19 10:29:07 symfony [info] {sfWebDebugLogger} Factories 50.86 ms (1)
+Sep 19 10:29:07 symfony [info] {sfWebDebugLogger} Action "default/index" 46.43 ms (1)
+Sep 19 10:29:07 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Sep 19 10:29:07 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 33.00 ms (1)
+Sep 19 10:29:07 symfony [info] {sfWebResponse} Send content (33408 o)
+Sep 19 10:34:40 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 19 10:34:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 19 10:34:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 19 10:34:40 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 19 10:34:40 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 19 10:34:40 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.just_giving_page_code AS p__just_giving_page_code, p.charity_code AS p__charity_code, p.charity_name AS p__charity_name, p.money_raised AS p__money_raised, p.just_giving_event_id AS p__just_giving_event_id FROM page p - ()
+Sep 19 10:34:40 symfony [info] {sfPHPView} Render "/home/.sites/137/site24/web/src/apps/frontend/modules/default/templates/indexSuccess.php"
+Sep 19 10:34:40 symfony [info] {sfPHPView} Decorate content with "/home/.sites/137/site24/web/src/apps/frontend/templates/layout.php"
+Sep 19 10:34:40 symfony [info] {sfPHPView} Render "/home/.sites/137/site24/web/src/apps/frontend/templates/layout.php"
+Sep 19 10:34:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 19 10:34:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 19 10:34:40 symfony [info] {sfWebDebugLogger} Configuration 2.12 ms (9)
+Sep 19 10:34:40 symfony [info] {sfWebDebugLogger} Factories 50.70 ms (1)
+Sep 19 10:34:40 symfony [info] {sfWebDebugLogger} Action "default/index" 46.27 ms (1)
+Sep 19 10:34:40 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Sep 19 10:34:40 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 16.54 ms (1)
+Sep 19 10:34:40 symfony [info] {sfWebResponse} Send content (33405 o)
