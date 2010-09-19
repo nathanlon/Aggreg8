@@ -1702,3 +1702,31 @@ Sep 19 04:55:46 symfony [info] {sfWebDebugLogger} Action "default/index" 4058.03
 Sep 19 04:55:46 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
 Sep 19 04:55:46 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 26.64 ms (1)
 Sep 19 04:55:46 symfony [info] {sfWebResponse} Send content (35234 o)
+Sep 19 10:16:16 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 19 10:16:16 symfony [info] {myUser} Automatic user logout due to timeout
+Sep 19 10:16:16 symfony [info] {myUser} User is not authenticated
+Sep 19 10:16:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 19 10:16:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 19 10:16:16 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 19 10:16:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 19 10:16:16 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.just_giving_page_code AS p__just_giving_page_code, p.charity_code AS p__charity_code, p.charity_name AS p__charity_name, p.money_raised AS p__money_raised, p.just_giving_event_id AS p__just_giving_event_id FROM page p - ()
+Sep 19 10:16:16 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[42S02]: Base table or view not found: 1146 Table 'charityhack.page' doesn't exist. Failing Query: "SELECT p.id AS p__id, p.just_giving_page_code AS p__just_giving_page_code, p.charity_code AS p__charity_code, p.charity_name AS p__charity_name, p.money_raised AS p__money_raised, p.just_giving_event_id AS p__just_giving_event_id FROM page p"
+Sep 19 10:16:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Sep 19 10:16:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 19 10:16:16 symfony [info] {sfWebDebugLogger} Configuration 115.70 ms (8)
+Sep 19 10:16:16 symfony [info] {sfWebDebugLogger} Factories 100.62 ms (1)
+Sep 19 10:16:16 symfony [info] {sfWebDebugLogger} Action "default/index" 115.89 ms (1)
+Sep 19 10:16:16 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (1)
+Sep 19 10:16:20 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Sep 19 10:16:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 19 10:16:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 19 10:16:20 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Sep 19 10:16:20 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 19 10:16:20 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.just_giving_page_code AS p__just_giving_page_code, p.charity_code AS p__charity_code, p.charity_name AS p__charity_name, p.money_raised AS p__money_raised, p.just_giving_event_id AS p__just_giving_event_id FROM page p - ()
+Sep 19 10:16:20 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[42S02]: Base table or view not found: 1146 Table 'charityhack.page' doesn't exist. Failing Query: "SELECT p.id AS p__id, p.just_giving_page_code AS p__just_giving_page_code, p.charity_code AS p__charity_code, p.charity_name AS p__charity_name, p.money_raised AS p__money_raised, p.just_giving_event_id AS p__just_giving_event_id FROM page p"
+Sep 19 10:16:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Sep 19 10:16:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 19 10:16:20 symfony [info] {sfWebDebugLogger} Configuration 1.76 ms (8)
+Sep 19 10:16:20 symfony [info] {sfWebDebugLogger} Factories 50.27 ms (1)
+Sep 19 10:16:20 symfony [info] {sfWebDebugLogger} Action "default/index" 118.56 ms (1)
+Sep 19 10:16:20 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (1)
