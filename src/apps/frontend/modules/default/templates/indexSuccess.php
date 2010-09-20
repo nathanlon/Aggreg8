@@ -18,7 +18,7 @@
 		<td class="col3 cell">Total</td>
 	</tr>
  	<tr class="rowb">
-		<td class="col1 cell"><a href="/frontend_dev.php/event/good">Goodwood Roller Marathon</a></td>
+		<td class="col1 cell"><a href="/event/good">Goodwood Roller Marathon</a></td>
 		<td class="col3 cell">&pound;4738.66</td>
 	</tr>
  	<tr class="rowb">
