@@ -901,3 +901,6 @@ div.flash {
     margin-bottom: 8px;
 
 }
+#page_charity_name {
+    display: none;
+}

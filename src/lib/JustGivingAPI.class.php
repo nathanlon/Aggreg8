@@ -112,8 +112,7 @@ XMLDOC;
         } else {
 
             $url = sfConfig::get("app_search_charity_search_sand");
-            $url = str_replace("{email}", sfConfig::get('app_email'), $url);
-
+            
             // add the search term
             $url .= "?q=" . $term;
 
