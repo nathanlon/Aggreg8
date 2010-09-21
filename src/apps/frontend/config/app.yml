@@ -43,4 +43,7 @@ all:
 # Search
 #  Charity Search (http://apimanagement.justgiving.com/wiki/search-charity-search)
   search_charity_search_sand: https://api.staging.justgiving.com/50694b0a/v1/charity/search 
-  search_charity_search_live: https://api.justgiving.com/50694b0a/v1/charity/search 
+  search_charity_search_live: https://api.justgiving.com/50694b0a/v1/charity/search
+# Retreive Page
+  retrieve_page_sand: "https://api.staging.justgiving.com/50694b0a/v1/fundraising/pages/{pageShortName}"
+  retrieve_page_live: https://api.justgiving.com/50694b0a/v1/fundraising/pages/{pageShortName}
