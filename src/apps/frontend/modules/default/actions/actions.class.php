@@ -44,11 +44,16 @@ class defaultActions extends sfActions
     */
     public function executeForm(sfWebRequest $request)
     {
+        //find the Just Giving Event Id.
+        $eventCode = $request->getParameter('event_code');
+        $event = Doctrine_Core::getTable('Event')->findOneByCode($eventCode);
+        $firstJGEvent = $event->JustGivingEvent[0];
+        $firstJGEventId = $firstJGEvent->id;
 
         $this->eventCode = $request->getParameter('event_code');
         $this->form = new PageCreationForm();
         $this->error = '';
-        $this->form->setDefault('just_giving_event_id', 1);
+        $this->form->setDefault('just_giving_event_id', $firstJGEventId);
         $this->form->setDefault('charity_code', '2357');
 
         if ($request->isMethod(sfWebRequest::POST))
@@ -59,42 +64,74 @@ class defaultActions extends sfActions
 
             if ($this->form->isValid())
             {
-                $title =        $params['title'];
-                $shortName =    $params['short_name'];
-                $targetAmount = $params['target_amount'];
-                $charityCode =  $params['charity_code'];
-                $jgEventId =    $params['just_giving_event_id'];
+                $existingShortPage = $params['existing_short_name'];
 
-
-                $response = JustGivingAPI::createPage('false' , $charityCode , 'false',
-								$jgEventId, $title, 'false',
-								$shortName, $title, null,
-								$targetAmount );
-                if (!is_null($response))
+                if ($existingShortPage != '')
                 {
-                    $uri = (string) $response->next->uri;
+                    $resp = JustGivingAPI::retrievePage($existingShortPage);
 
-                    if ($uri != '')
+                    $title = (string) $resp->eventName;
+
+                    if ($title != '')
                     {
-                        //find the event id from the event code.
-                        //$event = Doctrine_Core::getTable('Event')->findOneByCode($this->eventCode);
-
-                        $page = Doctrine_Core::getTable('Page')->create(array(
-                            'title'      =>      $title,
-                            'short_name' =>      $shortName,
-                            'target_amount' =>   $targetAmount,
-                            'charity_code' =>    $charityCode,
-                            'just_giving_event_id' => $jgEventId
-                            //'JustGivingEventId' => $jgEventId
-                        ));
-
+                        $page = new Page;
+                        $page->title =          $title;
+                        $page->short_name =     $existingShortPage;
+                        $page->target_amount =  (string) $resp->fundraisingTarget;
+                        $page->charity_name =   (string) $resp->charity->name;
+                        $page->charity_code =   (string) $resp->charity->registrationNumber;
+                        $page->money_raised =   (string) $resp->grandTotalRaisedExcludingGiftAid;
+                        $page->user =           (string) $resp->owner;
+                        $page->just_giving_event_id = $firstJGEventId;
                         $page->save();
 
-                        $this->redirect($uri);
+                        $this->getUser()->setFlash('message', 'The page with the title "'.$page->title.'" was found and added.');
                     }
                     else
                     {
-                        $this->error = 'Not able to create this JustGiving page.';
+                        $this->getUser()->setFlash('message', 'The page was not found.');
+                    }
+                }
+                else
+                {
+
+                    $title =        $params['title'];
+                    $shortName =    $params['short_name'];
+                    $targetAmount = $params['target_amount'];
+                    $charityCode =  $params['charity_code'];
+                    $jgEventId =    $params['just_giving_event_id'];
+
+
+                    $response = JustGivingAPI::createPage('false' , $charityCode , 'false',
+                                    $jgEventId, $title, 'false',
+                                    $shortName, $title, null,
+                                    $targetAmount );
+                    if (!is_null($response))
+                    {
+                        $uri = (string) $response->next->uri;
+
+                        if ($uri != '')
+                        {
+                            //find the event id from the event code.
+                            //$event = Doctrine_Core::getTable('Event')->findOneByCode($this->eventCode);
+
+                            $page = Doctrine_Core::getTable('Page')->create(array(
+                                'title'      =>      $title,
+                                'short_name' =>      $shortName,
+                                'target_amount' =>   $targetAmount,
+                                'charity_code' =>    $charityCode,
+                                'just_giving_event_id' => $jgEventId
+                                //'JustGivingEventId' => $jgEventId
+                            ));
+
+                            $page->save();
+
+                            $this->redirect($uri);
+                        }
+                        else
+                        {
+                            $this->error = 'Not able to create this JustGiving page.';
+                        }
                     }
                 }
             }

@@ -15,10 +15,11 @@ class PageCreationForm extends sfForm
   {
     $this->setWidgets(array(
       'charity_code'          => new sfWidgetFormInputText(),
-      'just_giving_event_id'  => new sfWidgetFormDoctrineChoice(array('model'=>'JustGivingEvent')),
+      'just_giving_event_id'  => new sfWidgetFormInputHidden(),
       'target_amount'         => new sfWidgetFormInputText(),
       'short_name'            => new sfWidgetFormInputText(),
       'title'                 => new sfWidgetFormInputText(array('label'=>'Title')),
+      'existing_short_name'   => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
@@ -27,6 +28,7 @@ class PageCreationForm extends sfForm
       'target_amount'         => new sfValidatorNumber(array('required' => false)),
       'short_name'            => new sfValidatorPass(array('required' => false)),
       'title'                 => new sfValidatorPass(array('required' => false)),
+      'existing_short_name'   => new sfValidatorPass(array('required' => false)),
     ));
 
 
