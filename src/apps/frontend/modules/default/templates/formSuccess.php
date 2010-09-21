@@ -41,7 +41,22 @@
         <label class="description" for="page_charity_code">Charity Id</label>
 
         <div>
-        <?php echo $form['charity_code']->render() ?>
+        <?php echo $form['charity_code']->render($sf_data->getRaw('charityCodeArray')) ?> <?php echo $charityName ?>
+        </div>
+        <?php
+        $charityArray = array();
+        if ($charityName != ''):
+            $charityArray = array('value' => $charityName);
+        endif;
+        ?>
+        
+        <?php echo $form['charity_name']->render($charityArray) ?>
+    </li>
+    <li id="li_9">
+        <label class="description" for="page_charity_search">OR Charity Search</label>
+
+        <div>
+        <?php echo $form['charity_search']->render() ?> (clear charity code above to search)
         </div>
     </li>
     <li class="buttons">

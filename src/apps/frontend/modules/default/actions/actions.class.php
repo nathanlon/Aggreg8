@@ -44,6 +44,8 @@ class defaultActions extends sfActions
     */
     public function executeForm(sfWebRequest $request)
     {
+        $this->charityName = '';
+        $this->charityCodeArray = array();
         //find the Just Giving Event Id.
         $eventCode = $request->getParameter('event_code');
         $event = Doctrine_Core::getTable('Event')->findOneByCode($eventCode);
@@ -54,7 +56,7 @@ class defaultActions extends sfActions
         $this->form = new PageCreationForm();
         $this->error = '';
         $this->form->setDefault('just_giving_event_id', $firstJGEventId);
-        $this->form->setDefault('charity_code', '2357');
+        //$this->form->setDefault('charity_code', '2357');
 
         if ($request->isMethod(sfWebRequest::POST))
         {
@@ -99,29 +101,57 @@ class defaultActions extends sfActions
                     $shortName =    $params['short_name'];
                     $targetAmount = $params['target_amount'];
                     $charityCode =  $params['charity_code'];
+                    $charityName =  $params['charity_name'];
+                    $charitySearch = $params['charity_search'];
                     $jgEventId =    $params['just_giving_event_id'];
+
+                    //if searching for a charity, find it first.
+                    if (($charitySearch != '') && ($charityCode == ''))
+                    {
+                        $charityResp = JustGivingAPI::charitySearch($charitySearch);
+
+                        if ($charityResp->error == '')
+                        {
+                            $charityName = (string) $charityResp->charitySearchResults->charitySearchResult[0]->name;
+                            $charityCode = (string) $charityResp->charitySearchResults->charitySearchResult[0]->charityId;
+
+                            $this->form->setDefault('charity_code', $charityCode);
+                            $this->charityName = $charityName;
+                            $this->charityCodeArray = array('value' => $charityCode);
+
+                            $this->form->setDefaults(array('charity_name' => $charityName));
+                            $this->getUser()->setFlash('message', 'We have found a charity, click submit again to use this, or clear the charity id and try again.');
+                            return;
+
+                        }
+                        else
+                        {
+                            $this->getUser()->setFlash('message', (string) $charityResp->error->desc);
+                            return;
+                        }
+                    }
 
 
                     $response = JustGivingAPI::createPage('false' , $charityCode , 'false',
                                     $jgEventId, $title, 'false',
                                     $shortName, $title, null,
                                     $targetAmount );
+
+
                     if (!is_null($response))
                     {
                         $uri = (string) $response->next->uri;
 
                         if ($uri != '')
                         {
-                            //find the event id from the event code.
-                            //$event = Doctrine_Core::getTable('Event')->findOneByCode($this->eventCode);
-
+                            
                             $page = Doctrine_Core::getTable('Page')->create(array(
                                 'title'      =>      $title,
                                 'short_name' =>      $shortName,
                                 'target_amount' =>   $targetAmount,
                                 'charity_code' =>    $charityCode,
+                                'charity_name' =>    $charityName,
                                 'just_giving_event_id' => $jgEventId
-                                //'JustGivingEventId' => $jgEventId
                             ));
 
                             $page->save();
@@ -130,14 +160,14 @@ class defaultActions extends sfActions
                         }
                         else
                         {
-                            $this->error = 'Not able to create this JustGiving page.';
+                            $this->getUser()->setFlash('message', 'Not able to create this JustGiving page.');
                         }
                     }
                 }
             }
             else
             {
-                $this->error = "Form is invalid.";
+                $this->getUser()->setFlash('message', "Form is invalid.");
             }
 
         }

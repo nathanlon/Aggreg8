@@ -15,6 +15,8 @@ class PageCreationForm extends sfForm
   {
     $this->setWidgets(array(
       'charity_code'          => new sfWidgetFormInputText(),
+      'charity_search'        => new sfWidgetFormInputText(),
+      'charity_name'          => new sfWidgetFormInputText(),
       'just_giving_event_id'  => new sfWidgetFormInputHidden(),
       'target_amount'         => new sfWidgetFormInputText(),
       'short_name'            => new sfWidgetFormInputText(),
@@ -24,6 +26,8 @@ class PageCreationForm extends sfForm
 
     $this->setValidators(array(
       'charity_code'          => new sfValidatorPass(array('required' => false)),
+      'charity_search'          => new sfValidatorPass(array('required' => false)),
+      'charity_name'          => new sfValidatorPass(array('required' => false)),
       'just_giving_event_id'  => new sfValidatorPass(array('required' => false)),
       'target_amount'         => new sfValidatorNumber(array('required' => false)),
       'short_name'            => new sfValidatorPass(array('required' => false)),
