@@ -2,7 +2,7 @@
 
 <div class="form_description">
     <h2>Aggreg8.me</h2>
-    <p>Aggregate the total money raised by your event.</p>
+    <p>Aggregate the total money raised on Just Giving by your event.</p>
 </div>
 
 <div id="grand_total">
@@ -13,7 +13,7 @@
 
     <table class="table" id="maintable" cellspacing="0" cellpadding="0">
         <tr class="rowa">
-            <td class="col1 cell">Event</td>
+            <td class="col1 cell">Latest Events using Aggreg8.me</td>
             <td class="col3 cell">Total</td>
         </tr>
         <?php foreach ($events as $event): ?>
