@@ -50,7 +50,7 @@
 
             <?php if (count($pages) == 0): ?>
                 <tr class="rowb">
-                    <td colspan="3">There are no pages tied to this event yet.</td>
+                    <td colspan="4">There are no pages tied to this event yet.</td>
                 </tr>
             <?php endif ?>
 
