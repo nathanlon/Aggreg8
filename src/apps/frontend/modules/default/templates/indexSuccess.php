@@ -2,7 +2,7 @@
 
 <div class="form_description">
     <h2>Aggreg8.me</h2>
-    <p>Aggregate the total money raised on Just Giving by your event.</p>
+    <p>Aggregate the total money raised by your event.</p>
 </div>
 
 <div id="grand_total">
