@@ -21,6 +21,11 @@ class defaultActions extends sfActions {
         list($this->events, $this->allEventsTotal) = Doctrine_Core::getTable('Event')->getEventsAndTotal();
     }
 
+    public function executeCreateEvent(sfWebRequest $request)
+    {
+        
+    }
+
     /**
      * Executes index action
      *
@@ -41,6 +46,8 @@ class defaultActions extends sfActions {
 
     }
 
+
+    
 
     /**
      * Executes index action

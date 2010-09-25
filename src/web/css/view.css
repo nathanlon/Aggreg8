@@ -265,7 +265,7 @@ form hr
 form li.section_break
 {
 	border-top:1px dotted #ccc;
-	margin-top:9px;
+	margin-top:13px;
 	padding-bottom:0;
 	padding-left:9px;
 	padding-top:13px;
@@ -888,8 +888,28 @@ font-weight: bold;
         text-align: right;
 }
 
+/****Homepage ********************/
 
-/****Event Page *******/
+.defaultIndex .buttons {
+    margin-bottom: 20px;
+    border-bottom: 1px dotted #CCCCCC;
+}
+
+.defaultIndex .buttons input {
+    margin-left: 40px;
+}
+
+.defaultIndex #totalDesc {
+    float:left;
+    margin-left:40px;
+    margin-top:11px;
+}
+
+.defaultIndex form.blank {
+    margin: 0;
+}
+
+/****Event Page & Homepage *******/
 
 .defaultIndex .form_description p {
     margin-left: 15px;
@@ -926,7 +946,7 @@ font-weight: bold;
     padding-bottom: 20px;
 }
 
-/****Event Page *******/
+/**** form for creating event *******/
 
 div.flash {
     background-color: #CCCCCC;

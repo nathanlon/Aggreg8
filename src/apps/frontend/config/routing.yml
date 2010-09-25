@@ -1,6 +1,10 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+new_event:
+  url:   /new/event
+  param: { module: default, action: newEvent }
+
 event:
   url:   /event/:event_code
   param: { module: default, action: event, event_code: 'good' }

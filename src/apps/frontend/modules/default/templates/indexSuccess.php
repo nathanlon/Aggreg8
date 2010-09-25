@@ -7,7 +7,14 @@
 </div>
 
 <div id="grand_total">
+    <div id="totalDesc">Currently Aggreg8ing events totalling:</div>
     <p>&pound;<?php echo $allEventsTotal ?></p>
+</div>
+
+<div class="buttons ">
+    <form class="blank" method="get" action="/new/event">
+        <input class="button_text" type="submit" name="submit" value="Create an Event "/>
+    </form>
 </div>
 
 <div class="data">
