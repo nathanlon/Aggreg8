@@ -11,8 +11,8 @@
   <body>
 
 	<img id="top" src="/images/top.png" alt="">
-	<div id="form_container">
-		<h1><a>Aggreg8.me</a></h1>
+	<div id="form_container" class="<?php include_slot('pageName') ?>">
+		<h1><a href="/">Aggreg8.me</a></h1>
 
         <?php echo $sf_content ?>
 

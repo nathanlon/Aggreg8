@@ -1,4 +1,4 @@
-
+<?php slot('pageName', $pageName) ?>
 		<form id="form_15307" class="appnitro"  method="get" action="/event/good/form">
 					<div class="form_description">
 			<h2>Aggreg8.me</h2>
