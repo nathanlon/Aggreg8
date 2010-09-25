@@ -888,12 +888,45 @@ font-weight: bold;
         text-align: right;
 }
 
-#grand_total p {
-        font-size:300%;
-        line-height:100%;
-        margin: 0px 0px 0px 300px;
-	color: #ff0000;
+
+/****Event Page *******/
+
+.defaultIndex .form_description p {
+    margin-left: 15px;
 }
+
+.defaultIndex .form_description h2 {
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.defaultIndex #grand_total, .defaultEvent #grand_total {
+    margin-bottom: 20px;
+    border-bottom: 1px dotted #CCCCCC;
+}
+
+.defaultIndex #grand_total p, .defaultEvent #grand_total p {
+    font-size:300%;
+    line-height:100%;
+
+	color: #ff0000;
+    text-align:right;
+
+}
+
+.defaultIndex #grand_total p {
+    margin: 0px 115px 13px 0;
+}
+
+.defaultEvent #grand_total p {
+    margin: 0px 95px 13px 0;
+}
+
+.defaultIndex .data {
+    padding-bottom: 20px;
+}
+
+/****Event Page *******/
 
 div.flash {
     background-color: #CCCCCC;

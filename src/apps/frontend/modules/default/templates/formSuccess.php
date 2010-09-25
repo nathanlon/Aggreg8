@@ -1,9 +1,10 @@
+<?php slot('pageName', $pageName) ?>
 <?php echo $form->renderFormTag(url_for('@form?event_code=' . $eventCode)) ?>
 
 <div class="form_description">
     <h2>Aggreg8.me</h2>
 
-    <p>Create a new Just Giving page, or add an existing page to the aggregator.</p>
+    <p>Create a new Just Giving page for <?php echo link_to($event->name, '@event?event_code='.$event->code) ?>, or add an existing page to the aggregator.</p>
 </div>
 <ul>
 <?php if ($sf_user->hasFlash('message')): ?>
@@ -56,7 +57,7 @@
         <label class="description" for="page_charity_search">OR Charity Search</label>
 
         <div>
-        <?php echo $form['charity_search']->render() ?> (clear charity code above to search)
+        <?php echo $form['charity_search']->render() ?> (clear charity id above to search)
         </div>
     </li>
     <li class="buttons">
@@ -72,7 +73,7 @@
     <h3>OR: Existing Page</h3>
 
 <li id="li_11">
-    <label class="description" for="page_short_name">Existing Just Giving Short Name</label>
+    <label class="description" for="page_short_name">Existing Just Giving Short Name (the end of the page web address)</label>
 
     <div>
     <?php echo $form['existing_short_name']->render() ?>

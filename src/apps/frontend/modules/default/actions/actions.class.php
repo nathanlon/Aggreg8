@@ -10,9 +10,18 @@
  */
 class defaultActions extends sfActions
 {
+
+    public function preExecute()
+    {
+        $action = $this->getRequest()->getParameter('action');
+        $module = $this->getRequest()->getParameter('module');
+        $this->pageName = $module . ucfirst($action);
+    }
+
     public function executeIndex(sfWebRequest $request)
 	{
-        
+
+        list($this->events, $this->allEventsTotal) = Doctrine_Core::getTable('Event')->getEventsAndTotal();
     }
 
 	/**
@@ -48,8 +57,8 @@ class defaultActions extends sfActions
         $this->charityCodeArray = array();
         //find the Just Giving Event Id.
         $eventCode = $request->getParameter('event_code');
-        $event = Doctrine_Core::getTable('Event')->findOneByCode($eventCode);
-        $firstJGEvent = $event->JustGivingEvent[0];
+        $this->event = Doctrine_Core::getTable('Event')->findOneByCode($eventCode);
+        $firstJGEvent = $this->event->JustGivingEvent[0];
         $firstJGEventId = $firstJGEvent->id;
 
         $this->eventCode = $request->getParameter('event_code');
