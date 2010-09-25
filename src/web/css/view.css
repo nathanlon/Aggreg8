@@ -946,7 +946,7 @@ font-weight: bold;
     padding-bottom: 20px;
 }
 
-/**** form for creating event *******/
+/**** form for creating page *******/
 
 div.flash {
     background-color: #CCCCCC;
@@ -956,4 +956,24 @@ div.flash {
 }
 #page_charity_name {
     display: none;
+}
+
+/**** forms for creating and editing event *****/
+
+.eventNew h2, .eventEdit h2 {
+    margin-left: 20px;
+}
+
+.eventNew #event_code, .eventEdit #event_code {
+    width: 200px;
+}
+
+.eventNew #event_name, .eventEdit #event_name {
+    width: 365px;
+}
+
+.eventNew input.submit, .eventEdit input.submit {
+    width: 165px;
+    float: left;
+    margin-left: 222px;
 }

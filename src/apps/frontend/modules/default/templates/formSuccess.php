@@ -8,9 +8,6 @@
         add an existing page to the aggregator.</p>
 </div>
 <ul>
-<?php if ($sf_user->hasFlash('message')): ?>
-<?php echo '<div class="flash">' . $sf_user->getFlash('message') . '</div>'; ?>
-<?php endif; ?>
 
 <?php echo $error ?>
     <h3>New Page</h3>

@@ -25,7 +25,7 @@ class aggreg8PagesTask extends sfBaseTask {
      */
     protected function configure() {
         $this->addArguments(array(
-            new sfCommandArgument('event_code', sfCommandArgument::OPTIONAL, 'The event code'),
+            new sfCommandArgument('event_code', sfCommandArgument::OPTIONAL, 'The event code', null),
         ));
 
         $this->namespace = 'aggreg8';
@@ -35,7 +35,8 @@ class aggreg8PagesTask extends sfBaseTask {
         $this->detailedDescription = <<<EOF
 The [aggreg8:pages|INFO] finds all the pages on JustGiving and aggreg8s them.
 
-If the event code is specified, it will only find the pages under that event.
+If the event code is specified, it will only find the pages under that event,
+otherwise it will find all events and update the money raised.
 
   [./symfony aggreg8:pages event_code|INFO]
 EOF;
@@ -49,37 +50,7 @@ EOF;
 
         // display
         $eventCode = $arguments['event_code'];
-
-        if ($eventCode != null) {
-
-            $event = Doctrine_Core::getTable('Event')->findOneByCode($eventCode);
-
-            $total = 0;
-            //get the event and look through all its pages.
-            foreach ($event->JustGivingEvent as $jgEvent)
-            {
-                $pages = Doctrine_Core::getTable('Page')->findByJustGivingEventId($jgEvent->id);
-
-                //get and save the amount raised for each page.
-                foreach ($pages as $page)
-                {
-                    $resp = JustGivingAPI::retrievePage($page->short_name);
-
-                    $moneyRaised = (string) $resp->grandTotalRaisedExcludingGiftAid;
-                    $page->money_raised = $moneyRaised;
-                    $page->save();
-
-                    if ($moneyRaised > 0) {
-                        $total += $moneyRaised;
-                    }
-
-                }
-            }
-
-            //save the events total.
-            $event->total_money = $total;
-            $event->save();
-        }
+        Doctrine_Core::getTable('Event')->updateMoneyRaised($eventCode);
 
     }
 

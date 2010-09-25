@@ -12,6 +12,13 @@ class EventForm extends BaseEventForm
 {
   public function configure()
   {
+
+      unset($this['total_money']);
+
+      $this->getWidget('code')->setLabel('Name without spaces for the URL:');
+      $this->getWidget('name')->setLabel('Name of the event as displayed on the summary page:');
+
+
   }
 
     /**
@@ -35,6 +42,11 @@ class EventForm extends BaseEventForm
         }
 
         return $event;
+    }
+
+    public function setLabels()
+    {
+        
     }
 
 }

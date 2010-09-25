@@ -14,6 +14,10 @@
 	<div id="form_container" class="<?php include_slot('pageName') ?>">
 		<h1><a href="/">Aggreg8.me</a></h1>
 
+        <?php if ($sf_user->hasFlash('message')): ?>
+        <?php echo '<div class="flash">' . $sf_user->getFlash('message') . '</div>'; ?>
+        <?php endif; ?>
+
         <?php echo $sf_content ?>
 
 		<div id="footer">

@@ -16,18 +16,53 @@ class defaultActions extends sfActions {
         $this->pageName = $module . ucfirst($action);
     }
 
+    /**
+     * The homepage has a list of events, and a total value.
+     * @param sfWebRequest $request
+     * @return void
+     */
     public function executeIndex(sfWebRequest $request) {
 
         list($this->events, $this->allEventsTotal) = Doctrine_Core::getTable('Event')->getEventsAndTotal();
     }
 
     /**
-     * Executes index action, Gets the pages within each JustGivingEvent object under an event.
+     * Deletes a page
+     * @param sfWebRequest $request
+     * @return void
+     */
+    public function executeDeletePage(sfWebRequest $request) {
+        $pageId = $request->getParameter('id');
+
+        $page = Doctrine_Core::getTable('Page')->findOneById($pageId);
+        $this->forward404Unless($page !== false, 'There was no page found with the id of ' . $pageId);
+
+        $event = $page->JustGivingEvent->Event;
+
+        //delete the page
+        $q = Doctrine_Query::create()
+                ->delete('Page p')
+                ->where('p.id = ?', $pageId)
+                ->execute();
+
+        //update the money raised for this page - do this later when offline.
+        //Doctrine_Core::getTable('Event')->updateMoneyRaised($event->code);
+
+        $this->getUser()->setFlash('message', 'The event has been deleted. Totals will update within an hour.');
+
+        //redirect back to the same page we came from.
+        $this->redirect('@admin_event?event_code=' . $event->code);
+    }
+
+    /**
+     * Gets the pages within each JustGivingEvent object under an event.
      *
      * @param sfRequest $request A request object
      */
     public function executeEvent(sfWebRequest $request) {
         $eventCode = $request->getParameter('event_code');
+
+        $this->canEdit = $request->hasParameter('edit');
 
         $this->event = Doctrine_Core::getTable('Event')->findOneByCode($eventCode);
 
@@ -35,15 +70,15 @@ class defaultActions extends sfActions {
         $pages = array();
 
         $jgEvents = Doctrine_Core::getTable('JustGivingEvent')->createQuery('jge')
-            ->where('jge.event_id = ?', $this->event->id)
-            ->execute();
+                ->where('jge.event_id = ?', $this->event->id)
+                ->execute();
 
         foreach ($jgEvents as $jgEvent)
         {
             // get a  list of funds by fund name
             $newPages = Doctrine_Core::getTable('Page')->createQuery('p')
-                ->where('p.just_giving_event_id = ?', $jgEvent->id)
-                ->execute();
+                    ->where('p.just_giving_event_id = ?', $jgEvent->id)
+                    ->execute();
 
             foreach ($newPages as $page)
             {
@@ -56,7 +91,7 @@ class defaultActions extends sfActions {
     }
 
     /**
-     * Executes index action
+     * A form to create a page on JustGiving that will be tracked by the system.
      *
      * @param sfRequest $request A request object
      */
