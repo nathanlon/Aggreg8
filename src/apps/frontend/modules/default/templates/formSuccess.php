@@ -4,13 +4,14 @@
 <div class="form_description">
     <h2>Aggreg8.me</h2>
 
-    <p>Create a new Just Giving page for <?php echo link_to($event->name, '@event?event_code='.$event->code) ?>, or add an existing page to the aggregator.</p>
+    <p>Create a new Just Giving page for <?php echo link_to($event->name, '@event?event_code=' . $event->code) ?>, or
+        add an existing page to the aggregator.</p>
 </div>
 <ul>
 <?php if ($sf_user->hasFlash('message')): ?>
-    <?php echo '<div class="flash">'.$sf_user->getFlash('message') . '</div>'; ?>
+<?php echo '<div class="flash">' . $sf_user->getFlash('message') . '</div>'; ?>
 <?php endif; ?>
-    
+
 <?php echo $error ?>
     <h3>New Page</h3>
 
@@ -44,14 +45,14 @@
         <div>
         <?php echo $form['charity_code']->render($sf_data->getRaw('charityCodeArray')) ?> <?php echo $charityName ?>
         </div>
-        <?php
-        $charityArray = array();
-        if ($charityName != ''):
-            $charityArray = array('value' => $charityName);
-        endif;
-        ?>
-        
-        <?php echo $form['charity_name']->render($charityArray) ?>
+    <?php
+            $charityArray = array();
+    if ($charityName != ''):
+        $charityArray = array('value' => $charityName);
+    endif;
+    ?>
+
+    <?php echo $form['charity_name']->render($charityArray) ?>
     </li>
     <li id="li_9">
         <label class="description" for="page_charity_search">OR Charity Search</label>
@@ -70,10 +71,11 @@
 <hr/>
 
 
-    <h3>OR: Existing Page</h3>
+<h3>OR: Existing Page</h3>
 
 <li id="li_11">
-    <label class="description" for="page_short_name">Existing Just Giving Short Name (the end of the page web address)</label>
+    <label class="description" for="page_short_name">Existing Just Giving Short Name (the end of the page web
+        address)</label>
 
     <div>
     <?php echo $form['existing_short_name']->render() ?>
