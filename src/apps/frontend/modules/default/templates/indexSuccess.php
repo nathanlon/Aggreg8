@@ -12,7 +12,7 @@
 </div>
 
 <div class="buttons ">
-    <form class="blank" method="get" action="/new/event">
+    <form class="blank" method="get" action="<?php echo url_for('@admin_event_new') ?>">
         <input class="button_text" type="submit" name="submit" value="Create an Event "/>
     </form>
 </div>

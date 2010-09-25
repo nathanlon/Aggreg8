@@ -1,9 +1,28 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
-new_event:
-  url:   /new/event
-  param: { module: default, action: newEvent }
+admin_event_new:
+  url:   /admin/event/new
+  param: { module: event, action: new }
+
+admin_event_create:
+  url:   /admin/event/create
+  param: { module: event, action: create }
+
+
+admin_event_update:
+  url:   /admin/event/update
+  param: { module: event, action: update }
+
+
+admin_event_delete:
+  url:   /admin/event/delete
+  param: { module: event, action: delete }
+
+
+admin_event_edit:
+  url:   /admin/event/edit/:id
+  param: { module: event, action: edit }
 
 event:
   url:   /event/:event_code

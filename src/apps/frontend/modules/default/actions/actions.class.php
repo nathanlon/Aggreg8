@@ -21,13 +21,8 @@ class defaultActions extends sfActions {
         list($this->events, $this->allEventsTotal) = Doctrine_Core::getTable('Event')->getEventsAndTotal();
     }
 
-    public function executeCreateEvent(sfWebRequest $request)
-    {
-        
-    }
-
     /**
-     * Executes index action
+     * Executes index action, Gets the pages within each JustGivingEvent object under an event.
      *
      * @param sfRequest $request A request object
      */
@@ -36,18 +31,29 @@ class defaultActions extends sfActions {
 
         $this->event = Doctrine_Core::getTable('Event')->findOneByCode($eventCode);
 
-        // get a  list of funds by fund name
-        $p = Doctrine_Query::create()->select('p.*')
-                ->from('Page p');
-        //->where();
+        //go through all the JustGivingEvent objects, finding pages.
+        $pages = array();
 
+        $jgEvents = Doctrine_Core::getTable('JustGivingEvent')->createQuery('jge')
+            ->where('jge.event_id = ?', $this->event->id)
+            ->execute();
 
-        $this->pages = $p->execute();
+        foreach ($jgEvents as $jgEvent)
+        {
+            // get a  list of funds by fund name
+            $newPages = Doctrine_Core::getTable('Page')->createQuery('p')
+                ->where('p.just_giving_event_id = ?', $jgEvent->id)
+                ->execute();
+
+            foreach ($newPages as $page)
+            {
+                $pages[] = $page;
+            }
+        }
+
+        $this->pages = $pages;
 
     }
-
-
-    
 
     /**
      * Executes index action
