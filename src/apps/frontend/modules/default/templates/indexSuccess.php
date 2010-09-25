@@ -23,12 +23,14 @@
         <tr class="rowa">
             <td class="col1 cell">Latest Events using Aggreg8.me</td>
             <td class="col3 cell">Total</td>
+            <td class="col3 cell">View</td>
             <td class="col3 cell">Edit</td>
         </tr>
     <?php foreach ($events as $event): ?>
         <tr class="rowb">
             <td class="col1 cell"><?php echo link_to($event->name, '@admin_event?event_code='.$event->code) ?></td>
             <td class="col3 cell">&pound;<?php echo ($event->total_money != '')?$event->total_money : '0.00' ?></td>
+            <td class="col3 cell"><a href="<?php echo url_for('@event?event_code='.$event->code) ?>">View</a></td>
             <td class="col3 cell"><a href="<?php echo url_for('@admin_event_edit?id='.$event->id) ?>">Edit</a></td>
         </tr>
     <?php endforeach ?>
