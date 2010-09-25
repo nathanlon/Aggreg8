@@ -1,13 +1,45 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+admin_page_delete:
+  url:   /admin/page/delete/:id
+  param: { module: default, action: deletePage }
+
+admin_event_new:
+  url:   /admin/event/new
+  param: { module: event, action: new }
+
+admin_event_create:
+  url:   /admin/event/create
+  param: { module: event, action: create }
+
+
+admin_event_update:
+  url:   /admin/event/update
+  param: { module: event, action: update }
+
+
+admin_event_delete:
+  url:   /admin/event/delete
+  param: { module: event, action: delete }
+
+
+admin_event_edit:
+  url:   /admin/event/edit/:id
+  param: { module: event, action: edit }
+
+
+admin_event:
+  url:   /event/:event_code/edit
+  param: { module: default, action: event, edit: true }
+
 event:
   url:   /event/:event_code
-  param: { module: default, action: event, event_code: 'good' }
+  param: { module: default, action: event }
 
 form:
   url:   /event/:event_code/form
-  param: { module: default, action: form, event_code: 'good' } 
+  param: { module: default, action: form } 
 
 # default rules
 homepage:
