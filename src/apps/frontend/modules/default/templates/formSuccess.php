@@ -4,7 +4,7 @@
 <div class="form_description">
     <h2>Aggreg8.me</h2>
 
-    <p>Create a new Just Giving page for <?php echo link_to($event->name, '@event?event_code=' . $event->code) ?>, or
+    <p>Create a new Just Giving page for <?php echo link_to($event->name, '@admin_event?event_code=' . $event->code) ?>, or
         add an existing page to the aggregator.</p>
 </div>
 <ul>
