@@ -210,7 +210,7 @@ class defaultActions extends sfActions {
                                 $errors .= ", ". (string) $error->desc;
                             }
 
-                            $this->getUser()->setFlash('message', 'Not able to create this JustGiving page.' . $errors);
+                            $this->getUser()->setFlash('message', 'Not able to create this JustGiving page' . $errors);
                         }
                     }
                 }
