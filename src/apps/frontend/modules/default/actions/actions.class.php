@@ -207,7 +207,7 @@ class defaultActions extends sfActions {
                             $errors = '';
                             foreach ($response->error as $error)
                             {
-                                $errors .= ", ". (string) $error;
+                                $errors .= ", ". (string) $error->desc;
                             }
 
                             $this->getUser()->setFlash('message', 'Not able to create this JustGiving page.' . $errors);
