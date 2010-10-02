@@ -37,13 +37,14 @@ admin_event:
   url:   /event/:event_code/edit
   param: { module: default, action: event, edit: true }
 
+form:
+  url:   /event/:event_code/form
+  param: { module: default, action: form }
+
 event:
   url:   /event/:event_code/:embedded/:theme
   param: { module: default, action: event, embedded: '', theme: '' }
 
-form:
-  url:   /event/:event_code/form
-  param: { module: default, action: form } 
 
 # default rules
 homepage:
