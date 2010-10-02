@@ -88,7 +88,24 @@ class defaultActions extends sfActions {
 
         $this->pages = $pages;
 
+        //the embedded display has a special layout and template named eventEmbedded.php
+        $theme = $request->getParameter('theme');
+        $this->getResponse()->addStyleSheet('view'.$theme);
+
+        if ($request->getParameter('embedded') != '')
+        {
+            return 'Embedded';
+        }
+
     }
+
+    public function executeEmbed(sfWebRequest $request)
+    {
+        $eventCode = $request->getParameter('event_code');
+
+        $this->event = Doctrine_Core::getTable('Event')->findOneByCode($eventCode);
+    }
+
 
     /**
      * A form to create a page on JustGiving that will be tracked by the system.

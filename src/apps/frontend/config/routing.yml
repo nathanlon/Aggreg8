@@ -1,6 +1,10 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+event_embed:
+  url:   /event/:event_code/embed
+  param: { module: default, action: embed }
+
 admin_page_delete:
   url:   /admin/page/delete/:id
   param: { module: default, action: deletePage }
@@ -34,8 +38,8 @@ admin_event:
   param: { module: default, action: event, edit: true }
 
 event:
-  url:   /event/:event_code
-  param: { module: default, action: event }
+  url:   /event/:event_code/:embedded/:theme
+  param: { module: default, action: event, embedded: '', theme: '' }
 
 form:
   url:   /event/:event_code/form

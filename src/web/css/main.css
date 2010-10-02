@@ -10,7 +10,7 @@ body
 #form_container
 {
 	background:#fff;
-	
+
 	margin:0 auto;
 	text-align:left;
 	width:640px;
@@ -33,6 +33,7 @@ body
 	width:640px;
 	padding-bottom: 15px;
 	font-size: 85%;
+    margin-top: 15px;
 }
 
 #footer a{
@@ -49,7 +50,7 @@ body
 	width:650px;
 }
 
-form.appnitro
+form
 {
 	margin:20px 20px 0;
 	padding:0 0 20px;
@@ -64,12 +65,12 @@ h1
 	padding:0;
 	text-decoration:none;
 	text-indent:-8000px;
-	
+
 }
 
 h1 a
 {
-	
+
 	display:block;
 	height:100%;
 	min-height:40px;
@@ -259,13 +260,13 @@ form li .datepicker
 
 form hr
 {
-	display:none;
+	display:block;
 }
 
 form li.section_break
 {
 	border-top:1px dotted #ccc;
-	margin-top:9px;
+	margin-top:13px;
 	padding-bottom:0;
 	padding-left:9px;
 	padding-top:13px;
@@ -279,12 +280,11 @@ form ul li.first
 	padding-top:0 !important;
 }
 
-form .section_break h3
+form h3
 {
 	font-size:110%;
-	font-weight:400;
 	line-height:130%;
-	margin:0 0 2px;
+	margin: 0 0 2px;
 }
 
 form .section_break p
@@ -292,6 +292,10 @@ form .section_break p
 	font-size:85%;
 
 	margin:0 0 10px;
+}
+
+form input#page_title {
+    width: 400px;
 }
 
 /**** Buttons ****/
@@ -589,7 +593,7 @@ form li:hover .guidelines
 }
 
 /*** Success Message ****/
-.form_success 
+.form_success
 {
 	clear: both;
 	margin: 0;
@@ -664,7 +668,7 @@ ul.password{
 .embed form.appnitro
 {
 	margin:0px 0px 0;
-	
+
 }
 
 
@@ -681,60 +685,60 @@ background: #fff;
 font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
 }
 
-.calendar .button { 
-text-align: center;    
-padding: 2px;          
+.calendar .button {
+text-align: center;
+padding: 2px;
 }
 
 .calendar .nav {
 background:#f5f5f5;
 }
 
-.calendar thead .title { 
-font-weight: bold;      
+.calendar thead .title {
+font-weight: bold;
 text-align: center;
 background: #dedede;
 color: #000;
 padding: 2px 0 3px 0;
 }
 
-.calendar thead .headrow { 
+.calendar thead .headrow {
 background: #f5f5f5;
 color: #444;
 font-weight:bold;
 }
 
-.calendar thead .daynames { 
+.calendar thead .daynames {
 background: #fff;
 color:#333;
 font-weight:bold;
 }
 
-.calendar thead .name { 
+.calendar thead .name {
 border-bottom: 1px dotted #ccc;
 padding: 2px;
 text-align: center;
 color: #000;
 }
 
-.calendar thead .weekend { 
+.calendar thead .weekend {
 color: #666;
 }
 
-.calendar thead .hilite { 
+.calendar thead .hilite {
 background-color: #444;
 color: #fff;
 padding: 1px;
 }
 
-.calendar thead .active { 
+.calendar thead .active {
 background-color: #d12f19;
 color:#fff;
 padding: 2px 0px 0px 2px;
 }
 
 
-.calendar tbody .day { 
+.calendar tbody .day {
 width:1.8em;
 color: #222;
 text-align: right;
@@ -762,19 +766,19 @@ background: #FFF1AF;
 background: #FFF1AF;
 }
 
-.calendar tbody td.hilite { 
+.calendar tbody td.hilite {
 padding: 1px 1px 1px 1px;
 background:#444 !important;
 color:#fff !important;
 }
 
-.calendar tbody td.active { 
+.calendar tbody td.active {
 color:#fff;
 background: #529214 !important;
 padding: 2px 2px 0px 2px;
 }
 
-.calendar tbody td.selected { 
+.calendar tbody td.selected {
 font-weight: bold;
 border: 1px solid #888;
 padding: 1px 1px 1px 1px;
@@ -782,11 +786,11 @@ background: #f5f5f5 !important;
 color: #222 !important;
 }
 
-.calendar tbody td.weekend { 
+.calendar tbody td.weekend {
 color: #666;
 }
 
-.calendar tbody td.today { 
+.calendar tbody td.today {
 font-weight: bold;
 color: #529214;
 background:#D9EFC2;
@@ -794,21 +798,21 @@ background:#D9EFC2;
 
 .calendar tbody .disabled { color: #999; }
 
-.calendar tbody .emptycell { 
+.calendar tbody .emptycell {
 visibility: hidden;
 }
 
-.calendar tbody .emptyrow { 
+.calendar tbody .emptyrow {
 display: none;
 }
 
-.calendar tfoot .footrow { 
+.calendar tfoot .footrow {
 text-align: center;
 background: #556;
 color: #fff;
 }
 
-.calendar tfoot .ttip { 
+.calendar tfoot .ttip {
 background: #222;
 color: #fff;
 font-size:10px;
@@ -816,14 +820,14 @@ border-top: 1px solid #dedede;
 padding: 3px;
 }
 
-.calendar tfoot .hilite { 
+.calendar tfoot .hilite {
 background: #aaf;
 border: 1px solid #04f;
 color: #000;
 padding: 1px;
 }
 
-.calendar tfoot .active { 
+.calendar tfoot .active {
 background: #77c;
 padding: 2px 0px 0px 2px;
 }
@@ -870,7 +874,7 @@ font-weight: bold;
 	border: 1px solid #FF6600;
  }
 #maintable .rowa {
-	background: #7b2e00;
+	background: #AF5D2B;
 	height: 20px;
 }
 #maintable .rowb {
@@ -885,9 +889,153 @@ font-weight: bold;
         text-align: right;
 }
 
-#grand_total p {
-        font-size:300%;
-        line-height:100%;
-        margin: 0px 0px 0px 300px;
+/****Homepage ********************/
+
+.defaultIndex .buttons {
+    margin-bottom: 20px;
+    border-bottom: 1px dotted #CCCCCC;
+}
+
+.defaultIndex .buttons input {
+    margin-left: 40px;
+}
+
+.defaultIndex #totalDesc {
+    float:left;
+    margin-left:40px;
+    margin-top:11px;
+}
+
+.defaultIndex form.blank {
+    margin: 0;
+}
+
+/****Event Page & Homepage *******/
+
+.form_description p {
+    margin-left: 15px;
+}
+
+.form_description h2 {
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.defaultIndex #grand_total, .defaultEvent #grand_total {
+    margin-bottom: 20px;
+    border-bottom: 1px dotted #CCCCCC;
+}
+
+.defaultIndex #grand_total p, .defaultEvent #grand_total p {
+    font-size:300%;
+    line-height:100%;
+
 	color: #ff0000;
+    text-align:right;
+
+}
+
+.defaultIndex #grand_total p {
+    margin: 0px 115px 13px 0;
+}
+
+.defaultEvent #grand_total p {
+    margin: 0px 95px 13px 0;
+}
+
+.defaultIndex .data {
+    padding-bottom: 20px;
+}
+
+p#grand_total_desc {
+    padding: 10px;
+}
+
+/**** form for creating page *******/
+
+div.flash {
+    background-color: #CCCCCC;
+    padding: 10px;
+    margin-bottom: 8px;
+
+}
+#page_charity_name {
+    display: none;
+}
+
+/**** forms for creating and editing event *****/
+
+.eventNew h2, .eventEdit h2 {
+    margin-left: 20px;
+}
+
+.eventNew #event_code, .eventEdit #event_code {
+    width: 200px;
+}
+
+.eventNew #event_name, .eventEdit #event_name {
+    width: 365px;
+}
+
+.eventNew input.submit, .eventEdit input.submit {
+    width: 165px;
+    float: left;
+    margin-left: 222px;
+}
+
+/**** Embed ****/
+
+
+iframe {
+    border: 0;
+    border-style: none;
+    margin-left: 80px;
+}
+
+h2 {
+    margin-left: 17px;
+}
+
+h3 {
+    margin-left: 20px;
+    width: 500px;
+}
+
+h3#embed_code_head {
+    padding-top: 15px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#embed_code {
+    width:        490px;
+    margin-left:  80px;
+}
+
+#themes {
+    margin-left:    80px;
+    width:          500px;
+    padding-bottom: 40px;
+    height:         43px;
+}
+
+#themes input {
+    float: left;
+}
+
+#themes label {
+    width: 78px;
+    float: left;
+    height: 19px;
+}
+
+#back_to_event {
+    float: right;
+    margin-top: -30px;
+    margin-right: 70px;
+}
+
+#embed_code_desc {
+    margin-left: 21px;
+    margin-top: 2px;
 }
