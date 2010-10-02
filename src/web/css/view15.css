@@ -899,3 +899,7 @@ font-weight: bold;
 #maintable .cell {
     color:  white;
 }
+
+#maintable .rowb td {
+    color: white;
+}
