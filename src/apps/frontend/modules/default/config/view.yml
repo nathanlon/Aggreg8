@@ -1,0 +1,4 @@
+eventEmbedded:
+  stylesheets: [-*, embedded]
+  has_layout: true
+  layout:     embedded
