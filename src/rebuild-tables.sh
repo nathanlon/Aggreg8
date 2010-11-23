@@ -5,7 +5,7 @@ cd src
 #fi 
 
 /home/solarspeed/php/bin/php symfony doctrine:drop-db
-mysqladmin create charityhack -u charityhack -phacktheplanet
+mysqladmin create charityhack -u charityhack -p--passwordhere--
 /home/solarspeed/php/bin/php symfony doctrine:insert-sql
 /home/solarspeed/php/bin/php symfony doctrine:data-load
 
