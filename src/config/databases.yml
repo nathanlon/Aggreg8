@@ -7,4 +7,4 @@ all:
     param:
       dsn:      mysql:host=localhost;dbname=charityhack
       username: charityhack
-      password: hacktheplanet
+      password: --password-here--
